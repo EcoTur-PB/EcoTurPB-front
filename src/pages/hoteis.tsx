@@ -7,12 +7,12 @@ import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-materi
 const hoteisData: Hotel[] = [
   {
     id: 1,
-    nome: "Hotel Eco Paradise",
-    descricao: "Um hotel sustentável localizado na praia de Tambaba, com vista panorâmica do mar e práticas ecológicas certificadas.",
-    cidade: "Conde",
+    nome: "Hotel Nord Easy Green Sunset",
+    descricao: "Um hotel para aproveitar a vista panorâmica do mar e práticas ecológicas certificadas.",
+    cidade: "João Pessoa",
     estado: "PB",
-    preco: 250.00,
-    imagem: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=300&fit=crop",
+    preco: 198.00,
+    imagem: "https://photos.hotelbeds.com/giata/original/16/163075/163075a_hb_a_001.jpg",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina", "Spa"],
     pontos_desconto: 50,
@@ -20,12 +20,12 @@ const hoteisData: Hotel[] = [
   },
   {
     id: 2,
-    nome: "Pousada Verde Mar",
-    descricao: "Pousada aconchegante em João Pessoa, próxima às principais atrações turísticas e com certificação ambiental.",
+    nome: "Ibis Hotel",
+    descricao: "Aproveite o conforto e a praticidade de um hotel de qualidade e referência em sustentabilidade.",
     cidade: "João Pessoa",
     estado: "PB",
     preco: 180.00,
-    imagem: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop",
+    imagem: "https://lh3.googleusercontent.com/p/AF1QipMCX5FxiKyfYJIlOoH3-Jm8xLL_uEsK7lrPfLhI=w4008-h3006-k-no",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Estacionamento", "Café da manhã"],
     pontos_desconto: 35,
@@ -33,12 +33,12 @@ const hoteisData: Hotel[] = [
   },
   {
     id: 3,
-    nome: "Resort Sustentável Bessa",
-    descricao: "Resort de luxo na praia do Bessa com energia solar, tratamento de água e programas de conservação marinha.",
+    nome: "Pousada Cabo Branco",
+    descricao: "Pousada aconchegante em João Pessoa, próxima às principais atrações turísticas e com certificação ambiental.",
     cidade: "João Pessoa",
     estado: "PB",
     preco: 420.00,
-    imagem: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=300&fit=crop",
+    imagem: "https://lh3.googleusercontent.com/p/AF1QipOLx8KzDOBE1X8P6-0BAyKVJceoPBm1Acc1N4O7=w4008-h3005-k-no",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina", "Spa", "Academia", "Praia Privada"],
     pontos_desconto: 80,
@@ -46,43 +46,17 @@ const hoteisData: Hotel[] = [
   },
   {
     id: 4,
-    nome: "Hotel Litoral Verde",
-    descricao: "Hotel familiar em Cabedelo com foco em turismo sustentável e experiências locais autênticas.",
-    cidade: "Cabedelo",
+    nome: "Pousada Luar Nas Dunas",
+    descricao: "Pousada familiar em Barra de Mamanguape, com foco em turismo sustentável e experiências locais autênticas.",
+    cidade: "Barra de Mamanguape",
     estado: "PB",
-    preco: 320.00,
-    imagem: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=300&fit=crop",
+    preco: 200.00,
+    imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqEyzhNYuVVhDedgaqvT9KgeOE07RvQjqffJGt0ix8-PIwkKPeKlAJ0bpiZX8UEq2uagmelpyJ-TJm0z6L-_QMM4FR12hhD5r1tZiDuiIX_VOraQYQO1FQNdAqUmRLfQhob8JDI=s5670-k-no",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina"],
     pontos_desconto: 60,
     porcentagem_desconto: 18
   },
-  {
-    id: 5,
-    nome: "Pousada Ecológica Campina",
-    descricao: "Hospedagem sustentável no interior da Paraíba, ideal para turismo rural e contato com a natureza.",
-    cidade: "Campina Grande",
-    estado: "PB",
-    preco: 150.00,
-    imagem: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop",
-    sustentavel: true,
-    comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Jardim"],
-    pontos_desconto: 30,
-    porcentagem_desconto: 12
-  },
-  {
-    id: 6,
-    nome: "Hotel Praia Dourada",
-    descricao: "Hotel moderno em Lucena com vista para o mar e práticas sustentáveis de gestão de resíduos.",
-    cidade: "Lucena",
-    estado: "PB",
-    preco: 280.00,
-    imagem: "https://images.unsplash.com/photo-1549294413-26f195200c16?w=500&h=300&fit=crop",
-    sustentavel: true,
-    comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina", "Bar"],
-    pontos_desconto: 55,
-    porcentagem_desconto: 22
-  }
 ];
 
 export default function HoteisPage() {
@@ -204,7 +178,7 @@ export default function HoteisPage() {
               {/* Contador de resultados */}
               <div className="flex items-center justify-center sm:justify-start">
                 <span className="text-gray-600 font-medium">
-                  {hoteisOrdenados.length} hotel{hoteisOrdenados.length !== 1 ? 'éis' : ''} encontrado{hoteisOrdenados.length !== 1 ? 's' : ''}
+                  {hoteisOrdenados.length} hote{hoteisOrdenados.length !== 1 ? 'is' : 'l'} encontrado{hoteisOrdenados.length !== 1 ? 's' : ''}
                 </span>
               </div>
             </div>
