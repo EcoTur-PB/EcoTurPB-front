@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/hello-world",
-    element: <h1>Hello World</h1>
+    element: <h1 className='text-red-500'>Hello World</h1>
   }
 ])
 
