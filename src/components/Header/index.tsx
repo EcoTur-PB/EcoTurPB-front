@@ -119,7 +119,8 @@ export function Header() {
           px-4 md:px-6 lg:px-8
           z-50
       ">
-        <Link to="/" className="text-2xl md:text-3xl font-semibold text-green-700 hover:text-green-800 transition-colors">
+        <Link to="/" className="text-2xl md:text-3xl font-semibold text-green-700 hover:text-green-800 transition-colors flex align-items-center">
+          <img src="/logo 1.svg" alt="EcoTurPB Logo" className="w-10 h-10 inline-block mr-2" />
           EcoTurPB
         </Link>
 

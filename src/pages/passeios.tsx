@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { PasseioCard, Passeio } from '../components/PasseioCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
+import { Moeda } from '../components/Moeda';
 
 // Dados mockados dos passeios
 const passeiosData: Passeio[] = [
@@ -147,7 +148,7 @@ export default function PasseiosPage() {
           {/* Pontos do usuário */}
           <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="text-2xl">🌊</div>
+              <Moeda/>
               <div>
                 <div className="text-lg font-bold text-blue-700">
                   {pontosUsuario.toLocaleString()} pontos disponíveis

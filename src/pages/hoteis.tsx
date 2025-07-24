@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { HotelCard, Hotel } from '../components/HotelCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
+import { Moeda } from '../components/Moeda';
 
 // Dados mockados dos hotéis
 const hoteisData: Hotel[] = [
@@ -146,7 +147,7 @@ export default function HoteisPage() {
           {/* Pontos do usuário */}
           <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="text-2xl">🏖️</div>
+              <Moeda/>
               <div>
                 <div className="text-lg font-bold text-green-700">
                   {pontosUsuario.toLocaleString()} pontos disponíveis
