@@ -17,10 +17,10 @@ function App() {
             <span className="border-b-4 md:border-b-6 lg:border-b-8 border-black font-semibold"> informação</span>
           </p>
           <p className="text-lg mt-4 md-2 md:text-xl lg:text-2xl px-4 md:px-8 lg:px-16 xl:px-32 text-gray-700 text-center">
-            Acumule pontos e ganhe descontos em hospedagens, passeios e restaurantes.
+            Passeios locais, com cultura, responsabilidade e sustentabilidade? <br />
           </p>
           <a href="/jogos" className="text-2xl bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center">
-            Jogue agora !
+            Jogue agora!
           </a>
         </div>
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
