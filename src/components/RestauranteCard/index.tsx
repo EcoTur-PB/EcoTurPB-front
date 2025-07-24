@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded, StarRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded} from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Restaurante {
