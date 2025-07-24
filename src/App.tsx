@@ -1,6 +1,6 @@
 import './App.css'
 import { Header } from './components/Header'
-import { ApartmentRounded, RestaurantRounded, SailingRounded } from '@mui/icons-material'
+import { ApartmentRounded, RestaurantRounded, SailingRounded, SportsEsportsRounded } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
           Oferecemos descontos em restaurantes, hotéis e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados
         </div>
 
-        <div className="servicos grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12 lg:mt-16 px-4 md:px-8 w-full max-w-7xl">
+        <div className="servicos grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-12 lg:mt-16 px-4 md:px-8 w-full max-w-7xl">
 
           <div className='card bg-white shadow-lg rounded-lg p-4 md:p-6 lg:p-8 border border-green-200 hover:border-green-300 transition flex flex-col gap-1'>
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
@@ -82,6 +82,22 @@ function App() {
               className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
               Ver Restaurantes
+            </Link>
+          </div>
+
+          <div className='card bg-white shadow-lg rounded-lg p-4 md:p-6 lg:p-8 border border-purple-200 hover:border-purple-300 transition flex flex-col gap-1'>
+            <div className="icon bg-purple-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
+              <SportsEsportsRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-purple-600" />
+            </div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-purple-800 font-semibold">Jogos Sustentáveis</div>
+            <div className="description text-gray-500 text-base md:text-lg font-medium">
+              Jogue e acumule pontos para trocar por descontos em nossos parceiros.
+            </div>
+            <Link 
+              to="/jogos" 
+              className="mt-4 bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
+            >
+              Jogar Agora
             </Link>
           </div>
          

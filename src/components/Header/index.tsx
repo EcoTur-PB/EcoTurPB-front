@@ -1,4 +1,4 @@
-import { ApartmentRounded, RestaurantRounded, SailingRounded, MenuRounded, CloseRounded, WhatsApp } from "@mui/icons-material";
+import { ApartmentRounded, RestaurantRounded, SailingRounded, MenuRounded, CloseRounded, WhatsApp, SportsEsportsRounded } from "@mui/icons-material";
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -137,6 +137,10 @@ export function Header() {
                   <RestaurantRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
                   <div className="hidden lg:block">Restaurantes</div>
               </Link>
+              <Link to="/jogos" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
+                  <SportsEsportsRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  <div className="hidden lg:block">Jogos</div>
+              </Link>
           </nav>
 
           {/* Desktop Login Button */}
@@ -200,6 +204,13 @@ export function Header() {
           >
             <RestaurantRounded className="w-6 h-6" /> 
             <span>Restaurantes</span>
+          </button>
+          <button
+            onClick={() => handleNavigation('/jogos')}
+            className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
+          >
+            <SportsEsportsRounded className="w-6 h-6" /> 
+            <span>Jogos</span>
           </button>
           <button 
             onClick={handleLoginClick}
