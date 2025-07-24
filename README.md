@@ -1,3 +1,12 @@
+# Como Rodar
+
+precisa do nodeJS
+
+```
+npm install
+npm run dev
+```
+
 # React template project
 
 This is a simple template to use when creating new react projects
