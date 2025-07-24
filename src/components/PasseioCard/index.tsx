@@ -190,7 +190,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
           {/* Botão de detalhes */}
           <button 
             onClick={() => setDialogoAberto(true)}
-            className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
+            className="cursor-pointer w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
           >
             Ver Detalhes
           </button>

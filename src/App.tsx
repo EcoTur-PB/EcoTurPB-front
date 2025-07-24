@@ -17,7 +17,7 @@ function App() {
             <span className="border-b-4 md:border-b-6 lg:border-b-8 border-black font-semibold"> informação</span>
           </p>
           <p className="text-lg mt-4 md-2 md:text-xl lg:text-2xl px-4 md:px-8 lg:px-16 xl:px-32 text-gray-700 text-center">
-            Acumule pontos e ganhe descontos em hotéis, passeios e restaurantes.
+            Acumule pontos e ganhe descontos em hospedagens, passeios e restaurantes.
           </p>
           <a href="/jogos" className="text-2xl bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center">
             Jogue agora !
@@ -35,7 +35,7 @@ function App() {
           Nossos serviços
         </div>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
-          Oferecemos descontos em restaurantes, hotéis e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados
+          Oferecemos descontos em restaurantes, hospedagens e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados
         </div>
 
         <div className="servicos grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12 lg:mt-16 px-4 md:px-8 w-full max-w-7xl">
@@ -44,15 +44,15 @@ function App() {
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <ApartmentRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-green-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">Hotéis Sustentáveis</div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">Hospedagens Sustentáveis</div>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
-              Descontos em hotéis que praticam turismo responsável e sustentável.
+              Descontos em hospedagens que praticam turismo responsável e sustentável.
             </div>
             <Link 
-              to="/hoteis" 
+              to="/hospedagem" 
               className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
-              Ver Hotéis
+              Ver Hospedagens
             </Link>
           </div>
 

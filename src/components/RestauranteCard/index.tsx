@@ -175,7 +175,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
         {/* Botão de detalhes */}
         <button 
           onClick={() => setDialogoAberto(true)}
-          className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
+          className="cursor-pointer w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
         >
           Ver Detalhes
         </button>

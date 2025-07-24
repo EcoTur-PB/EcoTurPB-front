@@ -29,19 +29,6 @@ const hoteisData: Hotel[] = [
     siteUrl: "https://hotelnordeasysunset.com.br"
   },
   {
-    id: 2,
-    nome: "Ibis Hotel",
-    descricao: "Aproveite o conforto e a praticidade de um hotel de qualidade e referência em sustentabilidade.",
-    cidade: "João Pessoa",
-    estado: "PB",
-    preco: 180.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipMCX5FxiKyfYJIlOoH3-Jm8xLL_uEsK7lrPfLhI=w4008-h3006-k-no",
-    sustentavel: true,
-    comodidades: ["Wi-Fi", "Estacionamento", "Café da manhã"],
-    pontos_desconto: 35,
-    porcentagem_desconto: 15
-  },
-  {
     id: 3,
     nome: "Pousada Cabo Branco",
     descricao: "Pousada aconchegante em João Pessoa, próxima às principais atrações turísticas e com certificação ambiental.",
@@ -138,7 +125,7 @@ export default function HoteisPage() {
         {/* Cabeçalho da página */}
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Hotéis <span className="text-green-600">Sustentáveis</span>
+            Hospedagens <span className="text-green-600">Sustentáveis</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
             Descubra acomodações que se preocupam com o meio ambiente e oferecem experiências autênticas na Paraíba.
