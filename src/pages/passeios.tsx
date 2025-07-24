@@ -139,10 +139,12 @@ export default function PasseiosPage() {
         {/* Cabeçalho da página */}
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Passeios <span className="text-blue-600">Sustentáveis</span> 
+            Atividades <span className="text-blue-600">Sustentáveis</span> 
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Descubra experiências únicas que promovem a conservação ambiental e o turismo responsável na Paraíba.
+            Atividades locais, preservando o meio ambiente e promovendo a cultura paraibana.
+            <br />
+            Participe de atividades gratuítas, ganhe pontos e ajude a preservar nosso ecossistema! 
           </p>
           
           {/* Pontos do usuário */}

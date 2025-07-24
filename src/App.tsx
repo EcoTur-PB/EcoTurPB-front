@@ -17,7 +17,7 @@ function App() {
             <span className="border-b-4 md:border-b-6 lg:border-b-8 border-black font-semibold"> informação</span>
           </p>
           <p className="text-lg mt-4 md-2 md:text-xl lg:text-2xl px-4 md:px-8 lg:px-16 xl:px-32 text-gray-700 text-center">
-            Passeios locais, com cultura, responsabilidade e sustentabilidade? <br />
+            Atividades locais, com cultura, responsabilidade e sustentabilidade? <br />
           </p>
           <a href="/jogos" className="text-2xl bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center">
             Jogue agora!
@@ -25,7 +25,7 @@ function App() {
         </div>
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
           <img className='object-cover w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-256 h-64 md:h-80 lg:h-96 rounded-2xl md:rounded-3xl shadow-lg' 
-            src="https://originalexperience.com.br/wp-content/uploads/2022/10/MARACAJAU-MERGULHO-CATAMARA-3.jpg" 
+            src="https://www.destinoparaiba.pb.gov.br/wp-content/uploads/2019/07/MiranteTambaba-Antonio_David1361-2.jpg" 
           alt="" />
         </div>
       </div>
@@ -60,15 +60,15 @@ function App() {
             <div className="icon bg-blue-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <SailingRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-blue-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">Passeios Sustentáveis</div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">Atividades Sustentáveis</div>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
-              Descontos em passeios que promovem a conservação ambiental.
+              Descontos em atividades que promovem a conservação ambiental.
             </div>
             <Link 
               to="/passeios" 
               className="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
-              Ver Passeios
+              Ver Atividades
             </Link>
           </div>
 
