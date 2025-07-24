@@ -1,4 +1,4 @@
-import { ApartmentRounded, FourKOutlined, RestaurantRounded, SailingRounded } from "@mui/icons-material";
+import { ApartmentRounded, RestaurantRounded, SailingRounded } from "@mui/icons-material";
 
 export function Header() {
   return (
