@@ -66,6 +66,19 @@ const hoteisData: Hotel[] = [
     pontos_desconto: 60,
     porcentagem_desconto: 18
   },
+  {
+    id: 5,
+    nome: "Pousada potiguara",
+    descricao: "Quartos com o conforto que você merece para curtir a Barra de Camaratuba, PB",
+    cidade: "Mataraca",
+    estado: "PB",
+    preco: 150.00,
+    imagem: "https://hweb-upload.s3-sa-east-1.amazonaws.com/642dc2aa3c0d4e2d4770b82c/c733cbd6e54c43f0b4eea057262009a8.jpg",
+    sustentavel: true,
+    comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina"],
+    pontos_desconto: 40,
+    porcentagem_desconto: 10
+  }
 ];
 
 export default function HoteisPage() {

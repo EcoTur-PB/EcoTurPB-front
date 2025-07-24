@@ -63,112 +63,75 @@ function JogosPage() {
             Jogos Disponíveis
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
             {/* Jogo Termo */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 md:p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <QuizRounded className="w-8 h-8 md:w-10 md:h-10 mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-bold">EcoTermo</h3>
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/jogo-1.png" 
+                  alt="EcoTermo - Jogo de palavras sustentáveis"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="flex items-center mb-2">
+                    <QuizRounded className="w-6 h-6 mr-2" />
+                    <h3 className="text-2xl font-bold">EcoTermo</h3>
+                  </div>
+                  <p className="text-sm opacity-90">Descubra palavras sustentáveis</p>
                 </div>
-                <p className="text-green-100 text-lg">
-                  Descubra palavras relacionadas ao turismo sustentável em 6 tentativas!
-                </p>
               </div>
-              
-              <div className="p-6 md:p-8 justify-between">
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Como Jogar:</h4>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Adivinhe a palavra de 5 letras sobre turismo sustentável</li>
-                    <li>• Você tem 6 tentativas para descobrir</li>
-                    <li>• Verde: letra certa no lugar certo</li>
-                    <li>• Amarelo: letra certa no lugar errado</li>
-                    <li>• Cinza: letra não está na palavra</li>
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2">Pontuação:</h4>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-yellow-50 p-3 rounded-lg">
-                      <div className="font-semibold text-yellow-700">1ª tentativa</div>
-                      <div className="text-yellow-600">100 pontos</div>
-                    </div>
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="font-semibold text-green-700">2ª tentativa</div>
-                      <div className="text-green-600">80 pontos</div>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="font-semibold text-blue-700">3ª tentativa</div>
-                      <div className="text-blue-600">60 pontos</div>
-                    </div>
-                    <div className="bg-purple-50 p-3 rounded-lg">
-                      <div className="font-semibold text-purple-700">4ª-6ª tent.</div>
-                      <div className="text-purple-600">40 pontos</div>
-                    </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-green-600">Até 100 pontos</span>
+                  </div>
+                  <div className="flex items-center text-yellow-500">
+                    <EmojiEventsRounded className="w-4 h-4 mr-1" />
+                    <span className="text-sm font-medium">Fácil</span>
                   </div>
                 </div>
-                
                 <Link 
                   to="/jogos/termo"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  Jogar EcoTermo
+                  Jogar Agora
                 </Link>
               </div>
             </div>
 
             {/* Jogo Caça-palavras */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 md:p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <SearchRounded className="w-8 h-8 md:w-10 md:h-10 mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-bold">EcoCaça</h3>
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/jogo-2.png" 
+                  alt="EcoCaça - Caça-palavras sustentável"
+                  className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="flex items-center mb-2">
+                    <SearchRounded className="w-6 h-6 mr-2" />
+                    <h3 className="text-2xl font-bold">Caça Palavras</h3>
+                  </div>
+                  <p className="text-sm opacity-90">Encontre palavras escondidas</p>
                 </div>
-                <p className="text-blue-100 text-lg">
-                  Encontre palavras escondidas sobre sustentabilidade e ecoturismo!
-                </p>
               </div>
-              
-              <div className="p-6 md:p-8 flex-col flex justify-between">
-                <div className="">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Como Jogar:</h4>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Encontre todas as palavras na grade de letras</li>
-                    <li>• As palavras podem estar na horizontal, vertical ou diagonal</li>
-                    <li>• Clique e arraste para selecionar as palavras</li>
-                    <li>• Complete o jogo no menor tempo possível</li>
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2">Pontuação:</h4>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="font-semibold text-green-700">Menos de 2 min</div>
-                      <div className="text-green-600">120 pontos</div>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="font-semibold text-blue-700">2-4 minutos</div>
-                      <div className="text-blue-600">100 pontos</div>
-                    </div>
-                    <div className="bg-yellow-50 p-3 rounded-lg">
-                      <div className="font-semibold text-yellow-700">4-6 minutos</div>
-                      <div className="text-yellow-600">80 pontos</div>
-                    </div>
-                    <div className="bg-red-50 p-3 rounded-lg">
-                      <div className="font-semibold text-red-700">Mais de 6 min</div>
-                      <div className="text-red-600">60 pontos</div>
-                    </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm text-gray-600">
+                    <span className="font-semibold text-blue-600">Até 120 pontos</span>
+                  </div>
+                  <div className="flex items-center text-orange-500">
+                    <EmojiEventsRounded className="w-4 h-4 mr-1" />
+                    <span className="text-sm font-medium">Médio</span>
                   </div>
                 </div>
-                
                 <Link 
                   to="/jogos/caca-palavras"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  Jogar EcoCaça
+                  Jogar Agora
                 </Link>
               </div>
             </div>
