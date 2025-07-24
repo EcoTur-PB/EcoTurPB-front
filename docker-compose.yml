@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ecoturpb-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecoturpb-frontend
+    ports:
+      - "7890:4173"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - ecoturpb-network
+
+networks:
+  ecoturpb-network:
+    driver: bridge
