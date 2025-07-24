@@ -125,13 +125,13 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-4 lg:space-x-8 items-center justify-center">
+              <Link to="/passeios" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
+                  <SailingRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  <div className="hidden lg:block">Atividades</div>
+              </Link>
               <Link to="/hoteis" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <ApartmentRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
                   <div className="hidden lg:block">Hoteis</div>
-              </Link>
-              <Link to="/passeios" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
-                  <SailingRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
-                  <div className="hidden lg:block">Passeios</div>
               </Link>
               <Link to="/restaurantes" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <RestaurantRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
@@ -185,18 +185,18 @@ export function Header() {
       >
         <nav className="flex flex-col space-y-4 p-4">
           <button
+            onClick={() => handleNavigation('/passeios')}
+            className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
+          >
+            <SailingRounded className="w-6 h-6" /> 
+            <span>Atividades</span>
+          </button>
+          <button
             onClick={() => handleNavigation('/hoteis')}
             className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
           >
             <ApartmentRounded className="w-6 h-6" /> 
             <span>Hoteis</span>
-          </button>
-          <button
-            onClick={() => handleNavigation('/passeios')}
-            className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
-          >
-            <SailingRounded className="w-6 h-6" /> 
-            <span>Passeios</span>
           </button>
           <button
             onClick={() => handleNavigation('/restaurantes')}

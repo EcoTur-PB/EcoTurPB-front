@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded, MoneyOffRounded } from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Passeio {
@@ -14,11 +14,12 @@ export interface Passeio {
   atividades: string[];
   duracao: string;
   grupo_max: number;
-  pontos_desconto: number;
+  pontos_desconto: string | number;
   porcentagem_desconto: number;
   textoRegiao?: string;
   boasPraticas?: string[];
   siteUrl?: string;
+  req? : string;
 }
 
 interface PasseioCardProps {
@@ -36,7 +37,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
   const [dialogoAberto, setDialogoAberto] = useState(false);
   
   // Verificar se o usuário tem pontos suficientes para o desconto
-  const temPontosSuficientes = pontosUsuario >= passeio.pontos_desconto;
+  const temPontosSuficientes = typeof pontosUsuario === "number" ? pontosUsuario >= Number(passeio.pontos_desconto) : false;
   const valorDesconto = temPontosSuficientes ? (passeio.preco * passeio.porcentagem_desconto) / 100 : 0;
   const precoComDesconto = passeio.preco - valorDesconto;
   
@@ -63,12 +64,20 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             alt={passeio.nome}
             className="w-full h-48 sm:h-56 object-cover"
           />
-          {passeio.sustentavel && (
-            <div className="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
-              <NatureRounded className="w-3 h-3" />
-              Sustentável
-            </div>
-          )}
+          <div className='w-full flex gap-2 flex-col justify-between absolute top-0 left-0 p-3'>
+            {passeio.sustentavel && (
+              <div className="w-fit bg-blue-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
+                <NatureRounded className="w-3 h-3" />
+                Sustentável
+              </div>
+            )}
+            {passeio.preco == 0 && (
+              <div className="w-fit bg-green-700 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
+                <MoneyOffRounded className="w-3 h-3" />
+                Gratuito
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Conteúdo do card */}
@@ -200,6 +209,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
         boasPraticas={boasPraticas}
         siteUrl={siteUrl}
         nomeEstabelecimento="passeio"
+        reqs={passeio.req}
       />
     </>
   );

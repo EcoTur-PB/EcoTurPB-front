@@ -11,6 +11,7 @@ interface DetalhesDialogProps {
   boasPraticas: string[];
   siteUrl: string;
   nomeEstabelecimento: string;
+  reqs? : string;
 }
 
 export function DetalhesDialog({ 
@@ -23,7 +24,8 @@ export function DetalhesDialog({
   textoRegiao, 
   boasPraticas, 
   siteUrl, 
-  nomeEstabelecimento 
+  nomeEstabelecimento,
+  reqs
 }: DetalhesDialogProps) {
   if (!isOpen) return null;
 
@@ -71,6 +73,9 @@ export function DetalhesDialog({
             {/* Texto e informações */}
             <div className="space-y-6">
               {/* Sobre a região */}
+              <div>
+                <p className="text-gray-600 leading-relaxed">{reqs}</p>
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Sobre a Região</h3>
                 <p className="text-gray-600 leading-relaxed">{textoRegiao}</p>

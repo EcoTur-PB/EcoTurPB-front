@@ -6,6 +6,52 @@ import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-materi
 // Dados mockados dos passeios
 const passeiosData: Passeio[] = [
   {
+    id: 0,
+    nome: "Multirão para limpeza de praias",
+    descricao: "O objetivo principal do Projeto Mares sem Plástico é apresentar para a sociedade a importância da preservação dos ambientes marinhos e costeiros e demonstrar o impacto do plástico nesses ecossistemas.",
+    cidade: "João Pessoa",
+    estado: "PB",
+    preco: 0,
+    imagem: "https://maressemplastico.com.br/wp-content/uploads/2022/08/274261049_967278447328268_5677348524536472115_n.jpg",
+    sustentavel: true,
+    atividades: ["Limpeza", "Educação Ambiental", "Conscientização"],
+    duracao: "1 hora",
+    grupo_max: 24,
+    pontos_desconto: '+25',
+    porcentagem_desconto: 15,
+    textoRegiao: "O ecossistema das praias de João Pessoa abriga manguezais, recifes de corais e uma rica biodiversidade marinha, sendo essencial para o equilíbrio ambiental e a sustentabilidade costeira.",
+    boasPraticas: [
+      'Coleta de resíduos plásticos',
+      'Educação ambiental sobre poluição marinha',
+      'Apoio a projetos de conservação marinha',
+    ],
+    siteUrl: "https://areiavermelhapb.com.br",
+    req: "Leve o plastico da sua casa!"
+  },
+  {
+    id: 0,
+    nome: "Guia Carlos Andrade - Tour pelo projeto peixe boi",
+    descricao: "O projeto peixe boi tem como objetivo a preservação da espécie e de seu habitat natural.",
+    cidade: "Rio Tinto",
+    estado: "PB",
+    preco: 100,
+    imagem: "https://static.wixstatic.com/media/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg",
+    sustentavel: true,
+    atividades: ["Limpeza", "Educação Ambiental", "Conscientização"],
+    duracao: "1 hora",
+    grupo_max: 24,
+    pontos_desconto: 25,
+    porcentagem_desconto: 15,
+    textoRegiao: "O ecossistema das praias de João Pessoa abriga manguezais, recifes de corais e uma rica biodiversidade marinha, sendo essencial para o equilíbrio ambiental e a sustentabilidade costeira.",
+    boasPraticas: [
+      'Coleta de resíduos plásticos',
+      'Educação ambiental sobre poluição marinha',
+      'Apoio a projetos de conservação marinha',
+    ],
+    siteUrl: "https://areiavermelhapb.com.br"
+  },
+
+  {
     id: 1,
     nome: "Mergulho em Areia Vermelha",
     descricao: "Mergulho com snorkel em uma das piscinas naturais mais belas da Paraíba, com foco na preservação marinha.",
@@ -29,87 +75,12 @@ const passeiosData: Passeio[] = [
     ],
     siteUrl: "https://areiavermelhapb.com.br"
   },
-  {
-    id: 2,
-    nome: "Trilha no Parque da Bica",
-    descricao: "Trilha ecológica com observação de fauna e flora nativa, promovendo a conservação da Mata Atlântica.",
-    cidade: "Areia",
-    estado: "PB",
-    preco: 45.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipMQr8iJCmjOEgwxPfIy-ZiY8l5QYXPJ6-HFsrxq=w4008-h3006-k-no",
-    sustentavel: true,
-    atividades: ["Trilha", "Observação", "Educação Ambiental"],
-    duracao: "3 horas",
-    grupo_max: 15,
-    pontos_desconto: 15,
-    porcentagem_desconto: 10
-  },
-  {
-    id: 3,
-    nome: "Passeio de Catamarã Sustentável",
-    descricao: "Navegação responsável com observação de tartarugas marinhas e educação ambiental sobre ecossistemas costeiros.",
-    cidade: "João Pessoa",
-    estado: "PB",
-    preco: 120.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipNKsJ9mGzqJvNGM5yVzfqOhKUfEPXXoW4HZjZjQ=w4008-h3006-k-no",
-    sustentavel: true,
-    atividades: ["Navegação", "Observação", "Educação Ambiental"],
-    duracao: "5 horas",
-    grupo_max: 20,
-    pontos_desconto: 40,
-    porcentagem_desconto: 20
-  },
-  {
-    id: 4,
-    nome: "Tour pela Mata do Buraquinho",
-    descricao: "Caminhada educativa pela maior área verde urbana de João Pessoa, com foco na preservação da biodiversidade.",
-    cidade: "João Pessoa",
-    estado: "PB",
-    preco: 35.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipO5KzJvGHJQqMlCy4CvYk9UbzMlKdJ4lMNfCwNa=w4008-h3006-k-no",
-    sustentavel: true,
-    atividades: ["Caminhada", "Observação", "Educação Ambiental"],
-    duracao: "2 horas",
-    grupo_max: 10,
-    pontos_desconto: 10,
-    porcentagem_desconto: 8
-  },
-  {
-    id: 5,
-    nome: "Observação de Peixe-Boi no Rio Mamanguape",
-    descricao: "Passeio de barco para observação do peixe-boi marinho em seu habitat natural, com guias especializados em conservação.",
-    cidade: "Rio Tinto",
-    estado: "PB",
-    preco: 95.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipMVqKpJZGHSzOGMK3PxQwYNFqMQhNwOjYhgJZXk=w4008-h3006-k-no",
-    sustentavel: true,
-    atividades: ["Observação", "Navegação", "Fotografia"],
-    duracao: "6 horas",
-    grupo_max: 8,
-    pontos_desconto: 30,
-    porcentagem_desconto: 18
-  },
-  {
-    id: 6,
-    nome: "Trilha do Açude de Bodocongó",
-    descricao: "Caminhada ao redor do açude com observação de aves migratórias e aprendizado sobre recursos hídricos da região.",
-    cidade: "Campina Grande",
-    estado: "PB",
-    preco: 25.00,
-    imagem: "https://lh3.googleusercontent.com/p/AF1QipMjKPFgWv8BFY6QE7Qhv9zCYg5KxPQnJyHfYjN8=w4008-h3006-k-no",
-    sustentavel: true,
-    atividades: ["Caminhada", "Observação de Aves", "Educação Ambiental"],
-    duracao: "3 horas",
-    grupo_max: 12,
-    pontos_desconto: 8,
-    porcentagem_desconto: 12
-  }
 ];
 
 export default function PasseiosPage() {
   const [passeios] = useState<Passeio[]>(passeiosData);
   const [filtro, setFiltro] = useState('');
-  const [ordenacao, setOrdenacao] = useState('nome');
+  const [ordenacao, setOrdenacao] = useState('preco-menor');
   const [cidadeFiltro, setCidadeFiltro] = useState('');
   
   // Pontos do usuário (pode ser alterado para testar)
@@ -135,7 +106,7 @@ export default function PasseiosPage() {
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
         return economiaB - economiaA;
       case 'pontos':
-        return b.pontos_desconto - a.pontos_desconto;
+        return  Number(b.pontos_desconto) - Number(a.pontos_desconto);
       case 'duracao':
         // Ordenar por duração (converte para número de horas)
         const duracaoA = parseInt(a.duracao.split(' ')[0]);
