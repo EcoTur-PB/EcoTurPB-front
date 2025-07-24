@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { HotelCard, Hotel } from '../components/HotelCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
@@ -93,6 +93,16 @@ export default function HoteisPage() {
         return a.nome.localeCompare(b.nome);
     }
   });
+
+  useEffect(() => {
+    // Simulação de chamada para obter pontos do usuário
+    const fetchPontosUsuario = async () => {
+      // Aqui você poderia fazer uma chamada API real para obter os pontos do usuário
+      // Simulando com um valor fixo
+      setPontosUsuario(50); // Exemplo: usuário tem 50 pontos
+    };
+    fetchPontosUsuario();
+  }, []);
 
   // Obter cidades únicas para o filtro
   const cidades = [...new Set(hoteis.map(hotel => hotel.cidade))];
