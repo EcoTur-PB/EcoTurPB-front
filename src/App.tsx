@@ -32,7 +32,7 @@ function App() {
 
       <div className="second-page flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-white px-4 md:px-8">
         <div className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
-          Nossos serviços
+          Acesse serviços sustentáveis 
         </div>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
           Oferecemos descontos em restaurantes, hospedagens e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados
