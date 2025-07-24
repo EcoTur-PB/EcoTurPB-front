@@ -1,6 +1,7 @@
 import './App.css'
 import { Header } from './components/Header'
 import { ApartmentRounded, RestaurantRounded, SailingRounded } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 function App() {
 
@@ -44,6 +45,12 @@ function App() {
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               Descontos em hotéis que praticam turismo responsável e sustentável.
             </div>
+            <Link 
+              to="/hoteis" 
+              className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
+            >
+              Ver Hotéis
+            </Link>
           </div>
 
           <div className='card bg-white shadow-lg rounded-lg p-4 md:p-6 lg:p-8 border border-blue-200 hover:border-green-300 transition flex flex-col gap-1'>
@@ -54,6 +61,12 @@ function App() {
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               Descontos em passeios que promovem a conservação ambiental.
             </div>
+            <Link 
+              to="/passeios" 
+              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
+            >
+              Ver Passeios
+            </Link>
           </div>
 
           <div className='card bg-white shadow-lg rounded-lg p-4 md:p-6 lg:p-8 border border-green-200 hover:border-green-300 transition flex flex-col gap-1'>
@@ -64,6 +77,12 @@ function App() {
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               Descontos em restaurantes que utilizam ingredientes locais e sustentáveis.
             </div>
+            <Link 
+              to="/restaurantes" 
+              className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
+            >
+              Ver Restaurantes
+            </Link>
           </div>
          
         </div>
