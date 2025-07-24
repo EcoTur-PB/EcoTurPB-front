@@ -1,6 +1,6 @@
 import './App.css'
 import { Header } from './components/Header'
-import { ApartmentRounded, RestaurantRounded, SailingRounded, SportsEsportsRounded } from '@mui/icons-material'
+import { ApartmentRounded, RestaurantRounded, SailingRounded} from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             Acumule pontos e ganhe descontos em hotéis, passeios e restaurantes.
           </p>
           <a href="/jogos" className="text-2xl bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center">
-            Jogue agora
+            Jogue agora !
           </a>
         </div>
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
