@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, WifiRounded, RestaurantRounded, LocalParkingRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded, StarRounded } from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
-export interface Hotel {
+export interface Restaurante {
   id: number;
   nome: string;
   descricao: string;
@@ -11,7 +11,9 @@ export interface Hotel {
   preco: number;
   imagem: string;
   sustentavel: boolean;
-  comodidades: string[];
+  especialidades: string[];
+  horario_funcionamento: string;
+  avaliacao: number;
   pontos_desconto: number;
   porcentagem_desconto: number;
   textoRegiao?: string;
@@ -19,86 +21,88 @@ export interface Hotel {
   siteUrl?: string;
 }
 
-interface HotelCardProps {
-  hotel: Hotel;
+interface RestauranteCardProps {
+  restaurante: Restaurante;
   pontosUsuario?: number;
 }
 
-const comodidadeIcons: { [key: string]: React.ReactNode } = {
-  'Wi-Fi': <WifiRounded className="w-4 h-4" />,
-  'Restaurante': <RestaurantRounded className="w-4 h-4" />,
-  'Estacionamento': <LocalParkingRounded className="w-4 h-4" />,
+const especialidadeIcons: { [key: string]: React.ReactNode } = {
+  'Frutos do Mar': <RestaurantRounded className="w-4 h-4" />,
+  'Regional': <NatureRounded className="w-4 h-4" />,
+  'Vegetariana': <NatureRounded className="w-4 h-4" />,
 };
 
-export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
+export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: RestauranteCardProps) {
   const [dialogoAberto, setDialogoAberto] = useState(false);
   
   // Verificar se o usuário tem pontos suficientes para o desconto
-  const temPontosSuficientes = pontosUsuario >= hotel.pontos_desconto;
-  const valorDesconto = temPontosSuficientes ? (hotel.preco * hotel.porcentagem_desconto) / 100 : 0;
-  const precoComDesconto = hotel.preco - valorDesconto;
+  const temPontosSuficientes = pontosUsuario >= restaurante.pontos_desconto;
+  const valorDesconto = temPontosSuficientes ? (restaurante.preco * restaurante.porcentagem_desconto) / 100 : 0;
+  const precoComDesconto = restaurante.preco - valorDesconto;
   
   // Dados padrão para quando não estão definidos
-  const textoRegiao = hotel.textoRegiao || `${hotel.cidade} é um destino encantador na Paraíba, oferecendo experiências únicas em hospedagem sustentável. A região combina belezas naturais com práticas responsáveis de turismo.`;
+  const textoRegiao = restaurante.textoRegiao || `${restaurante.cidade} é uma cidade encantadora da Paraíba, conhecida por sua rica cultura gastronômica e tradições locais. A região oferece uma variedade de ingredientes frescos e naturais, proporcionando uma experiência culinária única e autêntica.`;
   
-  const boasPraticas = hotel.boasPraticas || [
-    'Energia solar e sistemas de economia de energia',
-    'Gestão sustentável de resíduos',
-    'Uso consciente da água',
-    'Produtos de limpeza biodegradáveis',
-    'Apoio à economia local'
+  const boasPraticas = restaurante.boasPraticas || [
+    'Utilização de ingredientes locais e orgânicos',
+    'Apoio a produtores da agricultura familiar',
+    'Redução do desperdício de alimentos',
+    'Gestão responsável de resíduos',
+    'Economia de água e energia'
   ];
   
-  const siteUrl = hotel.siteUrl || '#';
+  const siteUrl = restaurante.siteUrl || '#';
   
   return (
     <>
       <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
-      {/* Imagem do hotel */}
+      {/* Imagem do restaurante */}
       <div className="relative">
         <img 
-          src={hotel.imagem} 
-          alt={hotel.nome}
+          src={restaurante.imagem} 
+          alt={restaurante.nome}
           className="w-full h-48 sm:h-56 object-cover"
         />
-        {hotel.sustentavel && (
+        {restaurante.sustentavel && (
           <div className="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
             <NatureRounded className="w-3 h-3" />
             Sustentável
           </div>
         )}
-        {/* <div className="absolute top-3 right-3 bg-yellow-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
-          <StarRounded className="w-3 h-3" />
-          {hotel.avaliacao.toFixed(1)}
-        </div> */}
       </div>
 
       {/* Conteúdo do card */}
       <div className="p-4 sm:p-6">
         <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
-          {hotel.nome}
+          {restaurante.nome}
         </h3>
         
         <div className="flex items-center gap-1 text-gray-600 mb-3">
           <LocationOnRounded className="w-4 h-4" />
-          <span className="text-sm">{hotel.cidade}, {hotel.estado}</span>
+          <span className="text-sm">{restaurante.cidade}, {restaurante.estado}</span>
         </div>
 
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-          {hotel.descricao}
+          {restaurante.descricao}
         </p>
 
-        {/* Comodidades */}
+        {/* Horário de funcionamento */}
+        <div className="flex items-center gap-1 text-gray-600 mb-4 text-sm">
+          <AccessTimeRounded className="w-4 h-4" />
+          <span>{restaurante.horario_funcionamento}</span>
+        </div>
+
+        {/* Especialidades */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {hotel.comodidades.slice(0, 3).map((comodidade, index) => (
-            <div key={index} className="flex items-center gap-1 bg-gray-100 px-2 py-1 rounded-full text-xs text-gray-700">
-              {comodidadeIcons[comodidade] || <span className="w-3 h-3 bg-gray-400 rounded-full"></span>}
-              {comodidade}
+          {restaurante.especialidades.slice(0, 3).map((especialidade, index) => (
+            <div key={index} className="flex items-center gap-1 bg-green-100 px-2 py-1 rounded-full text-xs text-green-700">
+              {especialidadeIcons[especialidade] || <span className="w-3 h-3 bg-green-400 rounded-full"></span>}
+              {especialidade}
             </div>
           ))}
-          {hotel.comodidades.length > 3 && (
-            <div className="bg-gray-100 px-2 py-1 rounded-full text-xs text-gray-700">
-              +{hotel.comodidades.length - 3} mais
+          {restaurante.especialidades.length > 3 && (
+            <div className="bg-green-100 px-2 py-1 rounded-full text-xs text-green-700">
+              +{restaurante.especialidades.length - 3} mais
             </div>
           )}
         </div>
@@ -111,7 +115,7 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
               {valorDesconto > 0 ? (
                 <>
                   <div className="text-sm text-gray-500 line-through">
-                    R$ {hotel.preco.toFixed(2)}
+                    R$ {restaurante.preco.toFixed(2)}
                   </div>
                   <div className="text-2xl font-bold text-green-600">
                     R$ {precoComDesconto.toFixed(2)}
@@ -119,21 +123,21 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
                 </>
               ) : (
                 <div className="text-2xl font-bold text-green-600">
-                  R$ {hotel.preco.toFixed(2)}
+                  R$ {restaurante.preco.toFixed(2)}
                 </div>
               )}
-              <div className="text-xs text-gray-500">por noite</div>
+              <div className="text-xs text-gray-500">preço médio</div>
             </div>
             
             {/* Informações do desconto */}
             <div className="text-right">
               {valorDesconto > 0 && (
                 <div className="text-sm font-bold text-red-600 mb-1">
-                  -{hotel.porcentagem_desconto}%
+                  -{restaurante.porcentagem_desconto}%
                 </div>
               )}
               <div className="text-sm font-medium text-green-600">
-                {hotel.pontos_desconto} pontos
+                {restaurante.pontos_desconto} pontos
               </div>
               <div className="text-xs text-gray-500">necessários</div>
             </div>
@@ -147,7 +151,7 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
                   Você economiza R$ {valorDesconto.toFixed(2)}
                 </div>
                 <div className="text-xs text-green-600">
-                  Usando {hotel.pontos_desconto} pontos
+                  Usando {restaurante.pontos_desconto} pontos
                 </div>
               </div>
             </div>
@@ -161,7 +165,7 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
                   Desconto indisponível
                 </div>
                 <div className="text-xs text-yellow-600">
-                  Você precisa de {hotel.pontos_desconto} pontos (tem {pontosUsuario})
+                  Você precisa de {restaurante.pontos_desconto} pontos (tem {pontosUsuario})
                 </div>
               </div>
             </div>
@@ -182,14 +186,14 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
     <DetalhesDialog
       isOpen={dialogoAberto}
       onClose={() => setDialogoAberto(false)}
-      titulo={hotel.nome}
-      imagem={hotel.imagem}
-      cidade={hotel.cidade}
-      estado={hotel.estado}
+      titulo={restaurante.nome}
+      imagem={restaurante.imagem}
+      cidade={restaurante.cidade}
+      estado={restaurante.estado}
       textoRegiao={textoRegiao}
       boasPraticas={boasPraticas}
       siteUrl={siteUrl}
-      nomeEstabelecimento="hotel"
+      nomeEstabelecimento="restaurante"
     />
   </>
   );

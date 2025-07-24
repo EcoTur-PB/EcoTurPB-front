@@ -16,7 +16,16 @@ const hoteisData: Hotel[] = [
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Estacionamento", "Piscina", "Spa"],
     pontos_desconto: 50,
-    porcentagem_desconto: 20
+    porcentagem_desconto: 20,
+    textoRegiao: "João Pessoa, capital da Paraíba, oferece uma combinação única de cultura, história e belezas naturais. A cidade é pioneira em práticas de turismo sustentável no Nordeste brasileiro.",
+    boasPraticas: [
+      'Sistema de energia solar para aquecimento de água',
+      'Programa de reutilização de toalhas e lençóis',
+      'Produtos de limpeza biodegradáveis certificados',
+      'Jardins com plantas nativas que requerem menos água',
+      'Parceria com fornecedores locais e orgânicos'
+    ],
+    siteUrl: "https://hotelnordeasysunset.com.br"
   },
   {
     id: 2,
@@ -115,7 +124,7 @@ export default function HoteisPage() {
         {/* Cabeçalho da página */}
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            <span className="text-green-600">Hotéis</span> Sustentáveis
+            Hotéis <span className="text-green-600">Sustentáveis</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
             Descubra acomodações que se preocupam com o meio ambiente e oferecem experiências autênticas na Paraíba.
@@ -124,7 +133,7 @@ export default function HoteisPage() {
           {/* Pontos do usuário */}
           <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="text-2xl">💰</div>
+              <div className="text-2xl">🏖️</div>
               <div>
                 <div className="text-lg font-bold text-green-700">
                   {pontosUsuario.toLocaleString()} pontos disponíveis
