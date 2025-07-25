@@ -8,7 +8,7 @@ import { Moeda } from '../components/Moeda';
 const passeiosData: Passeio[] = [
   {
     id: 0,
-    nome: "Multirão para limpeza de praias",
+    nome: "Mutirão para limpeza de praias",
     descricao: "O objetivo principal do Projeto Mares sem Plástico é apresentar para a sociedade a importância da preservação dos ambientes marinhos e costeiros e demonstrar o impacto do plástico nesses ecossistemas.",
     cidade: "João Pessoa",
     estado: "PB",
@@ -39,8 +39,8 @@ const passeiosData: Passeio[] = [
     imagem: "https://static.wixstatic.com/media/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg",
     sustentavel: true,
     atividades: ["Limpeza", "Educação Ambiental", "Conscientização"],
-    duracao: "1 hora",
-    grupo_max: 24,
+    duracao: "3 horas",
+    grupo_max: 5,
     pontos_desconto: 25,
     porcentagem_desconto: 15,
     textoRegiao: "O ecossistema das praias de João Pessoa abriga manguezais, recifes de corais e uma rica biodiversidade marinha, sendo essencial para o equilíbrio ambiental e a sustentabilidade costeira.",
@@ -58,7 +58,7 @@ const passeiosData: Passeio[] = [
     descricao: "Mergulho com snorkel em uma das piscinas naturais mais belas da Paraíba, com foco na preservação marinha.",
     cidade: "Cabedelo",
     estado: "PB",
-    preco: 85.00,
+    preco: 200.00,
     imagem: "https://originalexperience.com.br/wp-content/uploads/2022/10/MARACAJAU-MERGULHO-CATAMARA-3.jpg",
     sustentavel: true,
     atividades: ["Mergulho", "Observação", "Fotografia"],
@@ -76,6 +76,51 @@ const passeiosData: Passeio[] = [
     ],
     siteUrl: "https://areiavermelhapb.com.br"
   },
+  {
+    id: 6,
+    nome: "Trilhas dos Potiguaras",
+    descricao: "Criado o intuito de proteger o peixe-boi-marinho e o ecossistema de manguezal.", 
+    cidade: "Rio Tinto",
+    estado: "PB",
+    preco: 100.00,
+    imagem: "https://trilhasdospotiguaras.pb.gov.br/media/filer_public_thumbnails/filer_public/15/a3/15a3b7b2-ae38-418f-958e-03fd5c604e27/barra-do-mamanguape-bg.jpg__1700x901_q95_crop_subsampling-2_upscale.jpg",
+    sustentavel: true,
+    atividades: ["Peixe-boi-marinho", "Proteção Ambiental", "Ecossistema de manguezal"],
+    duracao: "3 horas",
+    grupo_max: 5,
+    pontos_desconto: 5,
+    porcentagem_desconto: 10
+  },
+  {
+    id: 7,
+    nome: "Potiguara Expeditions",
+    descricao: "Lhes convidamos a conhecer o norte da Paraíba e sua cultura indígena potiguara.", 
+    cidade: "Rio Tinto",
+    estado: "PB",
+    preco: 25,
+    imagem: "https://mytravelimages.blob.core.windows.net/producao0015f00000jfzvjaaw/logo.png",
+    sustentavel: true,
+    atividades: ["Trilha Ecológica", "Proteção Ambiental", "Potiguaras"],
+    duracao: "5 dias",
+    grupo_max: 15,
+    pontos_desconto: 8,
+    porcentagem_desconto: 25
+  },
+  {
+    id: 8,
+    nome: "Trilhas Ecológicas",
+    descricao: "Trilhas Ecológicas de Orientação: ecoturismo de contemplação e vivência no litoral norte paraibano.",
+    cidade: "João Pessoa",
+    estado: "PB",
+    preco: 150.00,
+    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU10onrV1-CBxXp94w5B3Jrx9RMMb8R05W2A&s",
+    sustentavel: true,
+    atividades: ["Trilha Ecológica", "Proteção Ambiental", "Potiguaras"],
+    duracao: "5 horas",
+    grupo_max: 15,
+    pontos_desconto: 8,
+    porcentagem_desconto: 25
+  }
 ];
 
 export default function PasseiosPage() {

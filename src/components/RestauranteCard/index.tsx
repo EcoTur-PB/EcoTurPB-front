@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded} from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded, LocalPizzaRounded, FrontHandRounded, Spa, CompostRounded, BlenderRounded} from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Restaurante {
@@ -30,6 +30,12 @@ const especialidadeIcons: { [key: string]: React.ReactNode } = {
   'Frutos do Mar': <RestaurantRounded className="w-4 h-4" />,
   'Regional': <NatureRounded className="w-4 h-4" />,
   'Vegetariana': <NatureRounded className="w-4 h-4" />,
+  'Pizzas': <LocalPizzaRounded className="w-4 h-4" />,
+  'Artesanais': <FrontHandRounded className="w-4 h-4" />,
+  'Orgânica': <CompostRounded className="w-4 h-4" />,
+  'Típica': <RestaurantRounded className="w-4 h-4" />,
+  'Natural': <Spa className="w-4 h-4" />,
+  'Sucos Detox': <BlenderRounded className="w-4 h-4" />
 };
 
 export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: RestauranteCardProps) {
