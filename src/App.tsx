@@ -25,7 +25,7 @@ function App() {
         </div>
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
           <img className='object-cover w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-256 h-64 md:h-80 lg:h-96 rounded-2xl md:rounded-3xl shadow-lg' 
-            src="https://www.destinoparaiba.pb.gov.br/wp-content/uploads/2019/07/MiranteTambaba-Antonio_David1361-2.jpg" 
+            src="https://images.unsplash.com/photo-1642670778570-d7d6e462b98c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="" />
         </div>
       </div>
