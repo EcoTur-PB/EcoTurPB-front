@@ -12,7 +12,7 @@ function App() {
       <div className="first-page pt-24 sm:pt-24 md:pt-32 lg:pt-36 pb-8 md:pb-12 lg:pb-16 grid grid-cols-1 gap-6 md:gap-8 justify-center items-center px-4 md:px-8">
         <div className="left flex flex-col justify-center gap-4 md:gap-8 lg:gap-4 items-center">
           <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl px-4 md:px-8 lg:px-16 xl:px-32 font-bold opacity-85 text-center">
-            Descubra a <span>Paraíba</span>  do jeito certo <br /> com <span className='text-green-600'>cultura</span> e <span className='text-green-600'>consciência</span>
+            Aproveite a <span>Paraíba</span>  do jeito certo <br /> com <span className='text-green-600'>cultura</span> e <span className='text-green-600'>consciência</span>
             {/* <span className=''>Turismo</span> <span className='text-green-600'>sustentável</span> com
             <br /><span className="text-green-600 font-semibold">descontos</span> e
             <span className="border-b-4 md:border-b-6 lg:border-b-8 border-black font-semibold"> informação</span> */}
