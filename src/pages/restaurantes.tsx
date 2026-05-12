@@ -9,8 +9,8 @@ const restaurantesData: Restaurante[] = [
   {
     id: 1,
     nome: "Margarida Pizzas Artesanais",
-    descricao: "Pizzas artesanais com ingredientes locais e práticas sustentáveis.",
-    cidade: "Bara de mamanguape",
+    descricao: "Pizzas artesanais com ingredientes locais e práticas sustentáveis na pacata vila de pescadores.",
+    cidade: "Barra de Mamanguape",
     estado: "PB",
     preco: 35.00,
     imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noqFz3EJ44W3sR13WYAvUXWmoQAnXYlXw60MmahECvDbvdc0PqGT7tg-yKOfnZeU7gNkP1eAreK52Ra5Lmj3DUUaaU8ghfrqhogj2rhMKJROzuSDIi0FjXq_Idh0K4qWRhWwNsqjQ=w2003-h2700-k-no",
@@ -20,45 +20,61 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.8,
     pontos_desconto: 20,
     porcentagem_desconto: 15,
-    textoRegiao: "João Pessoa, capital da Paraíba, é famosa por seus frutos do mar frescos e culinária regional única. A cidade possui uma rica tradição pesqueira e gastronômica, oferecendo ingredientes de alta qualidade diretamente dos pescadores locais.",
+    textoRegiao: "A Barra de Mamanguape é um destino de ecoturismo isolado, onde o rio se encontra com o mar. A vila preserva um estilo de vida simples e integrado à natureza, sendo base para o Projeto Peixe-Boi.",
     boasPraticas: [
-      "Parceria direta com pescadores locais",
-      "Cardápio sazonal com ingredientes frescos",
-      "Redução de plásticos descartáveis",
+      "Uso de ingredientes da agricultura familiar local",
+      "Redução drástica de resíduos plásticos",
+      "Contratação de funcionários da própria comunidade",
       "Compostagem de resíduos orgânicos",
-      "Apoio à economia local"
+      "Iluminação de baixo consumo"
     ],
-    siteUrl: "https://casadobacalhau.com.br"
+    siteUrl: "https://www.instagram.com/margaridapizzas/"
   },
   {
     id: 2,
     nome: "Mangai",
-    descricao: "Culinária regional nordestina com ingredientes orgânicos e apoio a produtores locais da Paraíba.",
+    descricao: "Referência em culinária regional nordestina, o Mangai utiliza ingredientes de alta qualidade e apoia pequenos produtores da Paraíba.",
     cidade: "João Pessoa",
     estado: "PB",
-    preco: 45.00,
+    preco: 75.00,
     imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noJ9FiUKe48F1cB9A5PqRlA2u152khsNSid6K-XIqCYkB544YJt7ZaqqqI0wPMR7uzdqIx4sRc5dL8Ac-uqlF8QueL_u0UUgw6-BOF4MsFcJ7IVOBciCTiI1UlDMys_b4fAbgLo=s1360-w1360-h1020-rw",
     sustentavel: true,
-    especialidades: ["Regional", "Típica", "Orgânica"],
-    horario_funcionamento: "11:30 - 15:00, 18:00 - 23:00",
-    avaliacao: 4.6,
+    especialidades: ["Regional", "Típica", "Nordestina"],
+    horario_funcionamento: "11:30 - 22:00",
+    avaliacao: 4.8,
     pontos_desconto: 15,
-    porcentagem_desconto: 12
+    porcentagem_desconto: 10,
+    textoRegiao: "João Pessoa é um polo gastronômico que une tradição e modernidade. O bairro de Manaíra, onde o Mangai está localizado, oferece uma vasta gama de opções que celebram o sabor do sertão e do mar.",
+    boasPraticas: [
+      "Gestão eficiente de resíduos",
+      "Uso de energia solar em suas unidades",
+      "Valorização da cultura nordestina através da gastronomia",
+      "Apoio a projetos sociais locais"
+    ],
+    siteUrl: "https://mangai.com.br"
   },
   {
     id: 3,
     nome: "Oca Natural",
-    descricao: "Cozinha natural e intimista de alimentos orgânicos sem glúten e livres de lactose com pratos e sucos detox.",
+    descricao: "Cozinha natural e intimista com foco em alimentos orgânicos, pratos sem glúten e opções saudáveis que respeitam o meio ambiente.",
     cidade: "João Pessoa",
     estado: "PB",
-    preco: 30.00,
+    preco: 45.00,
     imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr4E2HcA1jIHPx_ZANP7JhczxjiN6ZREV6823gVZdi_V2vW6R6_NQyLItJ_p2AqAlK5zDHbTCkWSKixe2K9yc2gx5pt258kVcTmPES7DXyQQYUk2T3TY4vt4Ukt-J8R3kZwMwg=s1360-w1360-h1020-rw",
     sustentavel: true,
-    especialidades: ['Natural', 'Orgânica', 'Sucos Detox'],
-    horario_funcionamento: "11:30 - 14:30",
+    especialidades: ['Natural', 'Saudável', 'Orgânica'],
+    horario_funcionamento: "11:30 - 15:00",
     avaliacao: 4.9,
     pontos_desconto: 30,
-    porcentagem_desconto: 20
+    porcentagem_desconto: 20,
+    textoRegiao: "Comer bem em João Pessoa também significa escolher opções saudáveis. A Oca Natural se destaca pela qualidade dos ingredientes vindos diretamente de produtores orgânicos da região.",
+    boasPraticas: [
+      "Ingredientes 100% orgânicos e sazonais",
+      "Zero uso de conservantes artificiais",
+      "Embalagens biodegradáveis para delivery",
+      "Programa de reciclagem de óleo de cozinha"
+    ],
+    siteUrl: "https://www.instagram.com/ocanaturaljp/"
   }
 ];
 
