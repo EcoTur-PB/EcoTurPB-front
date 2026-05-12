@@ -92,7 +92,7 @@ function JogosPage() {
                   </div>
                 </div>
                 <Link 
-                  to="/jogos"
+                  to="/jogos/termo"
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Jogar Agora
@@ -128,7 +128,7 @@ function JogosPage() {
                   </div>
                 </div>
                 <Link 
-                  to="/jogos"
+                  to="/jogos/caca-palavras"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Jogar Agora

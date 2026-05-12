@@ -7,6 +7,8 @@ import HoteisPage from './pages/hoteis.tsx'
 import PasseiosPage from './pages/passeios.tsx'
 import RestaurantesPage from './pages/restaurantes.tsx'
 import JogosPage from './pages/jogos.tsx'
+import Termo from './pages/Jogos/Termo.tsx'
+import CacaPalavras from './pages/Jogos/CacaPalavras.tsx'
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: "/jogos",
     element: <JogosPage/>
+  },
+  {
+    path: "/jogos/termo",
+    element: <Termo/>
+  },
+  {
+    path: "/jogos/caca-palavras",
+    element: <CacaPalavras/>
   }
 ])
 

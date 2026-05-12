@@ -135,6 +135,27 @@ const passeiosData: Passeio[] = [
       'Não retirar mudas ou sementes da floresta',
       'Seguir rigorosamente as trilhas demarcadas'
     ]
+  },
+  {
+    id: 7,
+    nome: "Visita à Estátua de Iemanjá",
+    descricao: "Conheça um dos marcos culturais e religiosos mais importantes do litoral paraibano. Localizada na Praia do Cabo Branco, a estátua de Iemanjá é um ponto de veneração e respeito às tradições afro-brasileiras.",
+    cidade: "João Pessoa",
+    estado: "PB",
+    preco: 0,
+    imagem: "https://assent-2k25.wscom.com.br/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-19.03.05.jpeg",
+    sustentavel: true,
+    atividades: ["Visitação", "Cultura", "Fotografia"],
+    duracao: "1 hora",
+    grupo_max: 100,
+    pontos_desconto: 0,
+    porcentagem_desconto: 0,
+    textoRegiao: "A Praia do Cabo Branco abriga este monumento icônico, sendo um local de grande importância espiritual para as religiões de matriz africana e um ponto turístico contemplativo.",
+    boasPraticas: [
+      'Respeito ao silêncio e à devoção alheia',
+      'Não deixar lixo no local ou na areia',
+      'Preservação do monumento histórico'
+    ]
   }
 ];
 
