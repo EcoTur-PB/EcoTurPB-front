@@ -189,7 +189,7 @@ export default function PasseiosPage() {
         // Ordena pela maior economia (valor em reais)
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
-        return economyB - economiaA;
+        return economiaB - economiaA;
       case 'pontos':
         return  Number(b.pontos_desconto) - Number(a.pontos_desconto);
       case 'duracao':
