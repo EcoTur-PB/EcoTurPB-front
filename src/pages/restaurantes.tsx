@@ -78,11 +78,14 @@ const restaurantesData: Restaurante[] = [
   }
 ];
 
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function RestaurantesPage() {
   const [restaurantes] = useState<Restaurante[]>(restaurantesData);
   const [filtro, setFiltro] = useState('');
   const [ordenacao, setOrdenacao] = useState('nome');
   const [cidadeFiltro, setCidadeFiltro] = useState('');
+  const { t } = useLanguage();
   
   // Pontos do usuário (pode ser alterado para testar)
   const [pontosUsuario, setPontosUsuario] = useState(50);
@@ -136,10 +139,17 @@ export default function RestaurantesPage() {
         {/* Cabeçalho da página */}
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Restaurantes <span className="text-green-600">Sustentáveis</span>
+            {t.restaurantes.title.split(' ').map((word, i) => (
+              <span key={i}>
+                {word === 'Sustentáveis' || word === 'Sustainable' ? (
+                  <span className="text-green-600">{word}</span>
+                ) : word}
+                {' '}
+              </span>
+            ))}
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Saboreie pratos deliciosos em estabelecimentos que valorizam ingredientes locais e práticas sustentáveis na Paraíba.
+            {t.restaurantes.subtitle}
           </p>
           
           {/* Pontos do usuário */}
@@ -148,10 +158,10 @@ export default function RestaurantesPage() {
               <Moeda/>
               <div>
                 <div className="text-lg font-bold text-green-700">
-                  {pontosUsuario.toLocaleString()} pontos disponíveis
+                  {t.restaurantes.pointsAvailable.replace('{points}', pontosUsuario.toLocaleString())}
                 </div>
                 <div className="text-sm text-green-600">
-                  Use seus pontos para obter descontos!
+                  {t.restaurantes.usePointsDesc}
                 </div>
               </div>
             </div>
@@ -167,7 +177,7 @@ export default function RestaurantesPage() {
                 <SearchRounded className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Buscar por nome..."
+                  placeholder={t.restaurantes.searchPlaceholder}
                   value={filtro}
                   onChange={(e) => setFiltro(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -182,7 +192,7 @@ export default function RestaurantesPage() {
                   onChange={(e) => setCidadeFiltro(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none"
                 >
-                  <option value="">Todas as cidades</option>
+                  <option value="">{t.restaurantes.allCities}</option>
                   {cidades.map(cidade => (
                     <option key={cidade} value={cidade}>{cidade}</option>
                   ))}
@@ -197,19 +207,19 @@ export default function RestaurantesPage() {
                   onChange={(e) => setOrdenacao(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none"
                 >
-                  <option value="nome">Nome (A-Z)</option>
-                  <option value="preco-menor">Menor preço</option>
-                  <option value="preco-maior">Maior preço</option>
-                  <option value="economia">Maior economia</option>
-                  <option value="pontos">Mais pontos</option>
-                  <option value="avaliacao">Melhor avaliação</option>
+                  <option value="nome">{t.restaurantes.sortName}</option>
+                  <option value="preco-menor">{t.restaurantes.sortPriceLow}</option>
+                  <option value="preco-maior">{t.restaurantes.sortPriceHigh}</option>
+                  <option value="economia">{t.restaurantes.sortEconomy}</option>
+                  <option value="pontos">{t.restaurantes.sortPoints}</option>
+                  <option value="avaliacao">{t.restaurantes.sortRating}</option>
                 </select>
               </div>
 
               {/* Contador de resultados */}
               <div className="flex items-center justify-center sm:justify-start">
                 <span className="text-gray-600 font-medium">
-                  {restaurantesOrdenados.length} restaurante{restaurantesOrdenados.length !== 1 ? 's' : ''} encontrado{restaurantesOrdenados.length !== 1 ? 's' : ''}
+                  {t.restaurantes.foundCount.replace('{count}', restaurantesOrdenados.length.toString())}
                 </span>
               </div>
             </div>
@@ -228,10 +238,10 @@ export default function RestaurantesPage() {
             <div className="text-center py-16">
               <div className="text-gray-400 text-6xl mb-4">🍽️</div>
               <h3 className="text-2xl font-semibold text-gray-600 mb-2">
-                Nenhum restaurante encontrado
+                {t.restaurantes.notFound}
               </h3>
               <p className="text-gray-500">
-                Tente ajustar seus filtros de busca.
+                {t.restaurantes.tryAdjustFilters}
               </p>
             </div>
           )}

@@ -14,6 +14,8 @@ interface DetalhesDialogProps {
   reqs? : string;
 }
 
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export function DetalhesDialog({ 
   isOpen, 
   onClose, 
@@ -27,6 +29,7 @@ export function DetalhesDialog({
   nomeEstabelecimento,
   reqs
 }: DetalhesDialogProps) {
+  const { t } = useLanguage();
   if (!isOpen) return null;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -73,17 +76,19 @@ export function DetalhesDialog({
             {/* Texto e informações */}
             <div className="space-y-6">
               {/* Sobre a região */}
+              {reqs && (
+                <div>
+                  <p className="text-gray-600 leading-relaxed">{reqs}</p>
+                </div>
+              )}
               <div>
-                <p className="text-gray-600 leading-relaxed">{reqs}</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Sobre a Região</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{t.common.aboutRegion}</h3>
                 <p className="text-gray-600 leading-relaxed">{textoRegiao}</p>
               </div>
 
               {/* Boas práticas */}
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">Práticas Sustentáveis</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{t.common.sustainablePractices}</h3>
                 <ul className="space-y-2">
                   {boasPraticas.map((pratica, index) => (
                     <li key={index} className="flex items-start gap-2">
@@ -102,7 +107,7 @@ export function DetalhesDialog({
               onClick={() => window.open(siteUrl, '_blank')}
               className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
             >
-              <span>Visitar site do {nomeEstabelecimento}</span>
+              <span>{t.common.visitSite.replace('{name}', nomeEstabelecimento)}</span>
               <OpenInNewRounded className="w-5 h-5" />
             </button>
           </div>

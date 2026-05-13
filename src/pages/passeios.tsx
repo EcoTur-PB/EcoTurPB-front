@@ -159,11 +159,14 @@ const passeiosData: Passeio[] = [
   }
 ];
 
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function PasseiosPage() {
   const [passeios] = useState<Passeio[]>(passeiosData);
   const [filtro, setFiltro] = useState('');
   const [ordenacao, setOrdenacao] = useState('preco-menor');
   const [cidadeFiltro, setCidadeFiltro] = useState('');
+  const { t } = useLanguage();
   
   // Pontos do usuário (pode ser alterado para testar)
   const [pontosUsuario, setPontosUsuario] = useState(50);
@@ -186,7 +189,7 @@ export default function PasseiosPage() {
         // Ordena pela maior economia (valor em reais)
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
-        return economiaB - economiaA;
+        return economyB - economiaA;
       case 'pontos':
         return  Number(b.pontos_desconto) - Number(a.pontos_desconto);
       case 'duracao':
@@ -220,12 +223,17 @@ export default function PasseiosPage() {
         {/* Cabeçalho da página */}
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-            Atividades <span className="text-blue-600">Sustentáveis</span> 
+            {t.passeios.title.split(' ').map((word, i) => (
+              <span key={i}>
+                {word === 'Sustentáveis' || word === 'Sustainable' ? (
+                  <span className="text-blue-600">{word}</span>
+                ) : word}
+                {' '}
+              </span>
+            ))}
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-            Atividades locais, preservando o meio ambiente e promovendo a cultura paraibana.
-            <br />
-            Participe de atividades gratuítas, ganhe pontos e ajude a preservar nosso ecossistema! 
+            {t.passeios.subtitle}
           </p>
           
           {/* Pontos do usuário */}
@@ -234,10 +242,10 @@ export default function PasseiosPage() {
               <Moeda/>
               <div>
                 <div className="text-lg font-bold text-blue-700">
-                  {pontosUsuario.toLocaleString()} pontos disponíveis
+                  {t.passeios.pointsAvailable.replace('{points}', pontosUsuario.toLocaleString())}
                 </div>
                 <div className="text-sm text-blue-600">
-                  Use seus pontos para obter descontos!
+                  {t.passeios.usePointsDesc}
                 </div>
               </div>
             </div>
@@ -253,7 +261,7 @@ export default function PasseiosPage() {
                 <SearchRounded className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Buscar por nome..."
+                  placeholder={t.passeios.searchPlaceholder}
                   value={filtro}
                   onChange={(e) => setFiltro(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -268,7 +276,7 @@ export default function PasseiosPage() {
                   onChange={(e) => setCidadeFiltro(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >
-                  <option value="">Todas as cidades</option>
+                  <option value="">{t.passeios.allCities}</option>
                   {cidades.map(cidade => (
                     <option key={cidade} value={cidade}>{cidade}</option>
                   ))}
@@ -283,19 +291,19 @@ export default function PasseiosPage() {
                   onChange={(e) => setOrdenacao(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >
-                  <option value="nome">Nome (A-Z)</option>
-                  <option value="preco-menor">Menor preço</option>
-                  <option value="preco-maior">Maior preço</option>
-                  <option value="economia">Maior economia</option>
-                  <option value="pontos">Mais pontos</option>
-                  <option value="duracao">Menor duração</option>
+                  <option value="nome">{t.passeios.sortName}</option>
+                  <option value="preco-menor">{t.passeios.sortPriceLow}</option>
+                  <option value="preco-maior">{t.passeios.sortPriceHigh}</option>
+                  <option value="economia">{t.passeios.sortEconomy}</option>
+                  <option value="pontos">{t.passeios.sortPoints}</option>
+                  <option value="duracao">{t.passeios.sortDuration}</option>
                 </select>
               </div>
 
               {/* Contador de resultados */}
               <div className="flex items-center justify-center sm:justify-start">
                 <span className="text-gray-600 font-medium">
-                  {passeiosOrdenados.length} passeio{passeiosOrdenados.length !== 1 ? 's' : ''} encontrado{passeiosOrdenados.length !== 1 ? 's' : ''}
+                  {t.passeios.foundCount.replace('{count}', passeiosOrdenados.length.toString())}
                 </span>
               </div>
             </div>
@@ -314,10 +322,10 @@ export default function PasseiosPage() {
             <div className="text-center py-16">
               <div className="text-gray-400 text-6xl mb-4">🚢</div>
               <h3 className="text-2xl font-semibold text-gray-600 mb-2">
-                Nenhum passeio encontrado
+                {t.passeios.notFound}
               </h3>
               <p className="text-gray-500">
-                Tente ajustar seus filtros de busca.
+                {t.passeios.tryAdjustFilters}
               </p>
             </div>
           )}

@@ -1,7 +1,8 @@
-import { ApartmentRounded, RestaurantRounded, SailingRounded, MenuRounded, CloseRounded, WhatsApp, SportsEsportsRounded } from "@mui/icons-material";
+import { ApartmentRounded, RestaurantRounded, SailingRounded, MenuRounded, CloseRounded, WhatsApp, SportsEsportsRounded, LanguageRounded } from "@mui/icons-material";
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ export function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { language, setLanguage, t } = useLanguage();
 
   const handleNavigation = (path: string) => {
     console.log('Navigating to:', path);
@@ -17,11 +19,15 @@ export function Header() {
     navigate(path);
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'pt' ? 'en' : 'pt');
+  };
+
   // Fechar menu mobile quando clicar fora
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      
+
       // Se clicou fora do header e do menu mobile, fechar
       if (
         headerRef.current && 
@@ -70,15 +76,15 @@ export function Header() {
     if (whatsappNumber.trim()) {
       // Remove formatação para validar
       const numbersOnly = whatsappNumber.replace(/\D/g, '');
-      
+
       if (numbersOnly.length !== 11) {
-        toast.error('Por favor, digite um número válido com DDD (11 dígitos)');
+        toast.error(t.header.invalidNumber);
         return;
       }
-      
+
       // Aqui você pode adicionar a lógica para processar o número
       console.log('Número de WhatsApp:', whatsappNumber);
-      toast.success(`Obrigado! Você receberá o código para login via Whatsapp`);
+      toast.success(t.header.loginSuccess);
       setIsLoginDialogOpen(false);
       setWhatsappNumber('');
     }
@@ -93,7 +99,7 @@ export function Header() {
   const formatWhatsappNumber = (value: string) => {
     // Remove todos os caracteres não numéricos
     const numbers = value.replace(/\D/g, '');
-    
+
     // Aplica a máscara (xx) xxxxx-xxxx
     if (numbers.length <= 2) {
       return `(${numbers}`;
@@ -128,24 +134,32 @@ export function Header() {
           <nav className="hidden md:flex space-x-4 lg:space-x-8 items-center justify-center">
               <Link to="/passeios" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <SailingRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
-                  <div className="hidden lg:block">Atividades</div>
+                  <div className="hidden lg:block">{t.header.activities}</div>
               </Link>
               <Link to="/hospedagem" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <ApartmentRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
-                  <div className="hidden lg:block">Hospedagem</div>
+                  <div className="hidden lg:block">{t.header.accommodations}</div>
               </Link>
               <Link to="/restaurantes" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <RestaurantRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
-                  <div className="hidden lg:block">Restaurantes</div>
+                  <div className="hidden lg:block">{t.header.restaurants}</div>
               </Link>
               <Link to="/jogos" className="text-gray-500 hover:text-green-700 text-lg lg:text-xl flex flex-row items-center space-x-1 lg:space-x-2">
                   <SportsEsportsRounded className="w-5 h-5 lg:w-6 lg:h-6" /> 
-                  <div className="hidden lg:block">Jogos</div>
+                  <div className="hidden lg:block">{t.header.games}</div>
               </Link>
           </nav>
 
-          {/* Desktop Login Button */}
-          <nav className="hidden md:block">
+          {/* Desktop Login Button and Language Toggle */}
+          <nav className="hidden md:flex items-center space-x-4">
+              <button 
+                onClick={toggleLanguage}
+                className="flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors text-gray-600 font-medium"
+                title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+              >
+                <LanguageRounded className="w-5 h-5" />
+                <span className="uppercase">{language}</span>
+              </button>
               <button 
                 onClick={handleLoginClick}
                 className="
@@ -161,21 +175,29 @@ export function Header() {
                   font-semibold
                   cursor-pointer
               ">
-                  Login
+                  {t.header.login}
               </button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <CloseRounded className="w-6 h-6 text-gray-700" />
-            ) : (
-              <MenuRounded className="w-6 h-6 text-gray-700" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <button 
+              onClick={toggleLanguage}
+              className="p-2 rounded-md hover:bg-gray-100 transition-colors text-gray-600"
+            >
+              <LanguageRounded className="w-6 h-6" />
+            </button>
+            <button 
+              className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <CloseRounded className="w-6 h-6 text-gray-700" />
+              ) : (
+                <MenuRounded className="w-6 h-6 text-gray-700" />
+              )}
+            </button>
+          </div>
       </header>
 
     {/* Mobile Menu Overlay */}
@@ -190,28 +212,28 @@ export function Header() {
             className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
           >
             <SailingRounded className="w-6 h-6" /> 
-            <span>Atividades</span>
+            <span>{t.header.activities}</span>
           </button>
           <button
             onClick={() => handleNavigation('/hospedagem')}
             className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
           >
             <ApartmentRounded className="w-6 h-6" /> 
-            <span>Hospedagem</span>
+            <span>{t.header.accommodations}</span>
           </button>
           <button
             onClick={() => handleNavigation('/restaurantes')}
             className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
           >
             <RestaurantRounded className="w-6 h-6" /> 
-            <span>Restaurantes</span>
+            <span>{t.header.restaurants}</span>
           </button>
           <button
             onClick={() => handleNavigation('/jogos')}
             className="text-gray-500 hover:text-green-700 text-lg flex flex-row items-center space-x-3 py-2 cursor-pointer text-left"
           >
             <SportsEsportsRounded className="w-6 h-6" /> 
-            <span>Jogos</span>
+            <span>{t.header.games}</span>
           </button>
           <button 
             onClick={handleLoginClick}
@@ -231,7 +253,7 @@ export function Header() {
               cursor-pointer
             "
           >
-            Login
+            {t.header.login}
           </button>
         </nav>
       </div>
@@ -247,7 +269,7 @@ export function Header() {
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
               <WhatsApp className="w-6 h-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-800">Login via WhatsApp</h2>
+              <h2 className="text-2xl font-bold text-gray-800">{t.header.loginViaWhatsapp}</h2>
             </div>
             <button
               onClick={() => setIsLoginDialogOpen(false)}
@@ -256,15 +278,15 @@ export function Header() {
               <CloseRounded className="w-6 h-6 text-gray-600" />
             </button>
           </div>
-          
+
           <p className="text-gray-600 mb-6">
-            Digite seu número de WhatsApp para receber o código de login.
+            {t.header.whatsappDescription}
           </p>
 
           <form onSubmit={handleWhatsappSubmit}>
             <div className="mb-4">
               <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-700 mb-2">
-                Número do WhatsApp
+                {t.header.whatsappNumber}
               </label>
               <input
                 type="tel"
@@ -277,21 +299,21 @@ export function Header() {
                 required
               />
             </div>
-            
+
             <div className="flex space-x-3">
               <button
                 type="button"
                 onClick={() => setIsLoginDialogOpen(false)}
                 className="flex-1 cursor-pointer px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
               >
-                Cancelar
+                {t.header.cancel}
               </button>
               <button
                 type="submit"
                 className="flex-1 cursor-pointer px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors font-semibold flex items-center justify-center space-x-2"
               >
                 <WhatsApp className="w-4 h-4" />
-                <span>Entrar</span>
+                <span>{t.header.enter}</span>
               </button>
             </div>
           </form>

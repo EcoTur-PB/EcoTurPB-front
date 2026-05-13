@@ -10,6 +10,8 @@ import JogosPage from './pages/jogos.tsx'
 import Termo from './pages/Jogos/Termo.tsx'
 import CacaPalavras from './pages/Jogos/CacaPalavras.tsx'
 
+import { LanguageProvider } from './contexts/LanguageContext.tsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +49,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <LanguageProvider>
+      <RouterProvider router={router}/>
+    </LanguageProvider>
   </StrictMode>,
 )

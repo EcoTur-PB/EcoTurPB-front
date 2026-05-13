@@ -33,8 +33,11 @@ const atividadeIcons: { [key: string]: React.ReactNode } = {
   'Observação': <NatureRounded className="w-4 h-4" />,
 };
 
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps) {
   const [dialogoAberto, setDialogoAberto] = useState(false);
+  const { t } = useLanguage();
   
   // Verificar se o usuário tem pontos suficientes para o desconto
   const temPontosSuficientes = typeof pontosUsuario === "number" ? pontosUsuario >= Number(passeio.pontos_desconto) : false;
@@ -68,13 +71,13 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             {passeio.sustentavel && (
               <div className="w-fit bg-blue-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
                 <NatureRounded className="w-3 h-3" />
-                Sustentável
+                {t.common.sustainable}
               </div>
             )}
             {passeio.preco == 0 && (
               <div className="w-fit bg-green-700 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
                 <MoneyOffRounded className="w-3 h-3" />
-                Gratuito
+                {t.common.free}
               </div>
             )}
           </div>
@@ -103,7 +106,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             </div>
             <div className="flex items-center gap-1">
               <GroupRounded className="w-4 h-4" />
-              <span>Até {passeio.grupo_max} pessoas</span>
+              <span>{t.common.upToPeople.replace('{count}', passeio.grupo_max.toString())}</span>
             </div>
           </div>
 
@@ -117,7 +120,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             ))}
             {passeio.atividades.length > 3 && (
               <div className="bg-blue-100 px-2 py-1 rounded-full text-xs text-blue-700">
-                +{passeio.atividades.length - 3} mais
+                {t.common.more.replace('{count}', (passeio.atividades.length - 3).toString())}
               </div>
             )}
           </div>
@@ -141,7 +144,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
                     R$ {passeio.preco.toFixed(2)}
                   </div>
                 )}
-                <div className="text-xs text-gray-500">por pessoa</div>
+                <div className="text-xs text-gray-500">{t.common.perPerson}</div>
               </div>
               
               {/* Informações do desconto */}
@@ -152,9 +155,9 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
                   </div>
                 )}
                 <div className="text-sm font-medium text-blue-600">
-                  {passeio.pontos_desconto} pontos
+                  {passeio.pontos_desconto} {t.common.points}
                 </div>
-                <div className="text-xs text-gray-500">necessários</div>
+                <div className="text-xs text-gray-500">{t.common.pointsRequired}</div>
               </div>
             </div>
             
@@ -163,24 +166,24 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-blue-700">
-                    Você economiza R$ {valorDesconto.toFixed(2)}
+                    {t.common.youSave.replace('{amount}', `R$ ${valorDesconto.toFixed(2)}`)}
                   </div>
                   <div className="text-xs text-blue-600">
-                    Usando {passeio.pontos_desconto} pontos
+                    {t.common.usingPoints.replace('{points}', passeio.pontos_desconto.toString())}
                   </div>
                 </div>
               </div>
             )}
             
             {/* Aviso de pontos insuficientes */}
-            {!temPontosSuficientes && (
+            {!temPontosSuficientes && Number(passeio.pontos_desconto) > 0 && (
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-yellow-700">
-                    Desconto indisponível
+                    {t.common.discountUnavailable}
                   </div>
                   <div className="text-xs text-yellow-600">
-                    Você precisa de {passeio.pontos_desconto} pontos (tem {pontosUsuario})
+                    {t.common.needPoints.replace('{points}', passeio.pontos_desconto.toString()).replace('{userPoints}', pontosUsuario.toString())}
                   </div>
                 </div>
               </div>
@@ -192,7 +195,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             onClick={() => setDialogoAberto(true)}
             className="cursor-pointer w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
           >
-            Ver Detalhes
+            {t.common.viewDetails}
           </button>
         </div>
       </div>

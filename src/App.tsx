@@ -3,7 +3,10 @@ import { Header } from './components/Header'
 import { ApartmentRounded, EmojiEventsRounded, QuizRounded, RestaurantRounded, SailingRounded, SearchRounded} from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
+import { useLanguage } from './contexts/LanguageContext'
+
 function App() {
+  const { t } = useLanguage();
 
   return (
     <div className='bg-green-50 top-0 left-0 min-h-screen'>
@@ -12,16 +15,20 @@ function App() {
       <div className="first-page pt-24 sm:pt-24 md:pt-32 lg:pt-36 pb-8 md:pb-12 lg:pb-16 grid grid-cols-1 gap-6 md:gap-8 justify-center items-center px-4 md:px-8">
         <div className="left flex flex-col justify-center gap-4 md:gap-8 lg:gap-4 items-center">
           <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 md:px-8 lg:px-16 xl:px-32 font-bold opacity-85 text-center">
-            Aproveite a <span>Paraíba</span>  do jeito certo <br /> com <span className='text-green-600'>cultura</span> e <span className='text-green-600'>consciência</span>
-            {/* <span className=''>Turismo</span> <span className='text-green-600'>sustentável</span> com
-            <br /><span className="text-green-600 font-semibold">descontos</span> e
-            <span className="border-b-4 md:border-b-6 lg:border-b-8 border-black font-semibold"> informação</span> */}
+            {t.home.heroTitle.split(' ').map((word, i) => (
+              <span key={i}>
+                {['Paraíba', 'cultura', 'consciência', 'culture', 'awareness'].includes(word.replace(/[.,]/g, '')) ? (
+                  <span className={word.replace(/[.,]/g, '') === 'Paraíba' ? '' : 'text-green-600'}>{word}</span>
+                ) : word}
+                {' '}
+              </span>
+            ))}
           </p>
           <p className="text-lg mt-4 md-2 md:text-xl lg:text-2xl px-4 md:px-8 lg:px-16 xl:px-32 text-gray-700 text-center">
-            Atividades locais, com cultura, responsabilidade e sustentabilidade? <br />
+            {t.home.heroSubtitle}
           </p>
           <Link to="/hospedagem" className="text-2xl bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center">
-            Descubra agora
+            {t.home.discoverNow}
           </Link>
         </div>
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
@@ -33,10 +40,10 @@ function App() {
 
       <div className="second-page flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-white px-4 md:px-8">
         <div className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
-          Acesse serviços sustentáveis 
+          {t.home.sustainableServices}
         </div>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
-          Oferecemos descontos em restaurantes, hospedagens e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados
+          {t.home.sustainableServicesDesc}
         </div>
 
         <div className="servicos grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-12 lg:mt-16 px-4 md:px-8 w-full max-w-7xl">
@@ -45,15 +52,15 @@ function App() {
             <div className="icon bg-blue-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <SailingRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-blue-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">Atividades Sustentáveis</div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">{t.home.sustainableActivities}</div>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
-              Descontos em atividades que promovem a conservação ambiental.
+              {t.home.sustainableActivitiesDesc}
             </div>
             <Link 
               to="/passeios" 
               className="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
-              Ver Atividades
+              {t.home.viewActivities}
             </Link>
           </div>
 
@@ -61,15 +68,15 @@ function App() {
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <ApartmentRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-green-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">Hospedagens Sustentáveis</div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableAccommodations}</div>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
-              Descontos em hospedagens que praticam turismo responsável e sustentável.
+              {t.home.sustainableAccommodationsDesc}
             </div>
             <Link 
               to="/hospedagem" 
               className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
-              Ver Hospedagens
+              {t.home.viewAccommodations}
             </Link>
           </div>
 
@@ -77,15 +84,15 @@ function App() {
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <RestaurantRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-green-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">Restaurantes Sustentáveis</div>
+            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableRestaurants}</div>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
-              Descontos em restaurantes que utilizam ingredientes locais e sustentáveis.
+              {t.home.sustainableRestaurantsDesc}
             </div>
             <Link 
               to="/restaurantes" 
               className="mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 text-center"
             >
-              Ver Restaurantes
+              {t.home.viewRestaurants}
             </Link>
           </div>
          
@@ -95,10 +102,10 @@ function App() {
 
       <div className="second-page flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-white px-4 md:px-8">
         <div className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
-          Conheça a Paraíba e ganhe descontos
+          {t.home.knowParaiba}
         </div>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
-          Jogue jogos rápidos, aprenda sobre a história da Paraíba e de seus pontos turísticos
+          {t.home.knowParaibaDesc}
         </div>
 
         <div className="servicos grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12 lg:mt-16 px-4 md:px-8 w-full max-w-7xl">
@@ -113,26 +120,26 @@ function App() {
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="flex items-center mb-2">
                     <QuizRounded className="w-6 h-6 mr-2" />
-                    <h3 className="text-2xl font-bold">EcoTermo</h3>
+                    <h3 className="text-2xl font-bold">{t.home.ecoTermo}</h3>
                   </div>
-                  <p className="text-sm opacity-90">Descubra palavras sustentáveis</p>
+                  <p className="text-sm opacity-90">{t.home.ecoTermoDesc}</p>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-sm text-gray-600">
-                    <span className="font-semibold text-green-600">Até 100 pontos</span>
+                    <span className="font-semibold text-green-600">{t.home.upToPoints.replace('{points}', '100')}</span>
                   </div>
                   <div className="flex items-center text-yellow-500">
                     <EmojiEventsRounded className="w-4 h-4 mr-1" />
-                    <span className="text-sm font-medium">Fácil</span>
+                    <span className="text-sm font-medium">{t.home.easy}</span>
                   </div>
                 </div>
                 <Link 
                   to="/jogos/termo"
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  Jogar Agora
+                  {t.home.playNow}
                 </Link>
               </div>
             </div>
@@ -149,26 +156,26 @@ function App() {
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="flex items-center mb-2">
                     <SearchRounded className="w-6 h-6 mr-2" />
-                    <h3 className="text-2xl font-bold">Caça Palavras</h3>
+                    <h3 className="text-2xl font-bold">{t.home.cacaPalavras}</h3>
                   </div>
-                  <p className="text-sm opacity-90">Encontre palavras escondidas</p>
+                  <p className="text-sm opacity-90">{t.home.cacaPalavrasDesc}</p>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-sm text-gray-600">
-                    <span className="font-semibold text-blue-600">Até 120 pontos</span>
+                    <span className="font-semibold text-blue-600">{t.home.upToPoints.replace('{points}', '120')}</span>
                   </div>
                   <div className="flex items-center text-orange-500">
                     <EmojiEventsRounded className="w-4 h-4 mr-1" />
-                    <span className="text-sm font-medium">Médio</span>
+                    <span className="text-sm font-medium">{t.home.medium}</span>
                   </div>
                 </div>
                 <Link 
                   to="/jogos/caca-palavras"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
-                  Jogar Agora
+                  {t.home.playNow}
                 </Link>
               </div>
             </div>

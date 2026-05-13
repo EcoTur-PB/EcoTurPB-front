@@ -38,8 +38,11 @@ const especialidadeIcons: { [key: string]: React.ReactNode } = {
   'Sucos Detox': <BlenderRounded className="w-4 h-4" />
 };
 
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: RestauranteCardProps) {
   const [dialogoAberto, setDialogoAberto] = useState(false);
+  const { t } = useLanguage();
   
   // Verificar se o usuário tem pontos suficientes para o desconto
   const temPontosSuficientes = pontosUsuario >= restaurante.pontos_desconto;
@@ -72,7 +75,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
         {restaurante.sustentavel && (
           <div className="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
             <NatureRounded className="w-3 h-3" />
-            Sustentável
+            {t.common.sustainable}
           </div>
         )}
       </div>
@@ -108,7 +111,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
           ))}
           {restaurante.especialidades.length > 3 && (
             <div className="bg-green-100 px-2 py-1 rounded-full text-xs text-green-700">
-              +{restaurante.especialidades.length - 3} mais
+              {t.common.more.replace('{count}', (restaurante.especialidades.length - 3).toString())}
             </div>
           )}
         </div>
@@ -132,7 +135,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
                   R$ {restaurante.preco.toFixed(2)}
                 </div>
               )}
-              <div className="text-xs text-gray-500">preço médio</div>
+              <div className="text-xs text-gray-500">{t.common.averagePrice}</div>
             </div>
             
             {/* Informações do desconto */}
@@ -143,9 +146,9 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
                 </div>
               )}
               <div className="text-sm font-medium text-green-600">
-                {restaurante.pontos_desconto} pontos
+                {restaurante.pontos_desconto} {t.common.points}
               </div>
-              <div className="text-xs text-gray-500">necessários</div>
+              <div className="text-xs text-gray-500">{t.common.pointsRequired}</div>
             </div>
           </div>
           
@@ -154,10 +157,10 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
             <div className="bg-green-50 border border-green-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-green-700">
-                  Você economiza R$ {valorDesconto.toFixed(2)}
+                  {t.common.youSave.replace('{amount}', `R$ ${valorDesconto.toFixed(2)}`)}
                 </div>
                 <div className="text-xs text-green-600">
-                  Usando {restaurante.pontos_desconto} pontos
+                  {t.common.usingPoints.replace('{points}', restaurante.pontos_desconto.toString())}
                 </div>
               </div>
             </div>
@@ -168,10 +171,10 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-yellow-700">
-                  Desconto indisponível
+                  {t.common.discountUnavailable}
                 </div>
                 <div className="text-xs text-yellow-600">
-                  Você precisa de {restaurante.pontos_desconto} pontos (tem {pontosUsuario})
+                  {t.common.needPoints.replace('{points}', restaurante.pontos_desconto.toString()).replace('{userPoints}', pontosUsuario.toString())}
                 </div>
               </div>
             </div>
@@ -183,7 +186,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
           onClick={() => setDialogoAberto(true)}
           className="cursor-pointer w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200"
         >
-          Ver Detalhes
+          {t.common.viewDetails}
         </button>
       </div>
     </div>
