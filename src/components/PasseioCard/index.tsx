@@ -130,26 +130,34 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             {/* Preço original e com desconto */}
             <div className="flex justify-between items-center">
               <div>
-                {valorDesconto > 0 ? (
+                {passeio.preco > 0 ? (
                   <>
-                    <div className="text-sm text-gray-500 line-through">
-                      R$ {passeio.preco.toFixed(2)}
-                    </div>
-                    <div className="text-2xl font-bold text-blue-600">
-                      R$ {precoComDesconto.toFixed(2)}
-                    </div>
+                    {valorDesconto > 0 ? (
+                      <>
+                        <div className="text-sm text-gray-500 line-through">
+                          R$ {passeio.preco.toFixed(2)}
+                        </div>
+                        <div className="text-2xl font-bold text-blue-600">
+                          R$ {precoComDesconto.toFixed(2)}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-2xl font-bold text-blue-600">
+                        R$ {passeio.preco.toFixed(2)}
+                      </div>
+                    )}
+                    <div className="text-xs text-gray-500">{t.common.perPerson}</div>
                   </>
                 ) : (
-                  <div className="text-2xl font-bold text-blue-600">
-                    R$ {passeio.preco.toFixed(2)}
+                  <div className="text-lg font-bold text-blue-600">
+                    {t.common.consultPrice}
                   </div>
                 )}
-                <div className="text-xs text-gray-500">{t.common.perPerson}</div>
               </div>
               
               {/* Informações do desconto */}
               <div className="text-right">
-                {valorDesconto > 0 && (
+                {passeio.preco > 0 && valorDesconto > 0 && (
                   <div className="text-sm font-bold text-red-600 mb-1">
                     -{passeio.porcentagem_desconto}%
                   </div>
@@ -162,7 +170,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             </div>
             
             {/* Economia */}
-            {valorDesconto > 0 && (
+            {passeio.preco > 0 && valorDesconto > 0 && (
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-blue-700">
@@ -176,7 +184,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             )}
             
             {/* Aviso de pontos insuficientes */}
-            {!temPontosSuficientes && Number(passeio.pontos_desconto) > 0 && (
+            {passeio.preco > 0 && !temPontosSuficientes && Number(passeio.pontos_desconto) > 0 && (
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-yellow-700">

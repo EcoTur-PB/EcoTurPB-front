@@ -14,7 +14,7 @@ const passeiosData: Passeio[] = [
     cidade: "João Pessoa",
     estado: "PB",
     preco: 0,
-    imagem: "https://maressemplastico.com.br/wp-content/uploads/2022/08/274261049_967278447328268_5677348524536472115_n.jpg",
+    imagem: "https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Limpeza", "Educação Ambiental", "Conscientização"],
     duracao: "3 horas",
@@ -36,8 +36,8 @@ const passeiosData: Passeio[] = [
     descricao: "Conheça o trabalho de conservação de um dos mamíferos aquáticos mais ameaçados do Brasil. O tour inclui visita ao centro de visitantes e observação em ambiente natural no estuário.",
     cidade: "Rio Tinto",
     estado: "PB",
-    preco: 80,
-    imagem: "https://static.wixstatic.com/media/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg/v1/fit/w_2500,h_1330,al_c/d56100_23204f2e75ad4d8a80fa8b6000348665~mv2.jpg",
+    preco: 0,
+    imagem: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Observação", "Educação Ambiental", "Navegação"],
     duracao: "3 horas",
@@ -58,8 +58,8 @@ const passeiosData: Passeio[] = [
     descricao: "Explore as piscinas naturais que se formam na maré baixa. Este passeio foca na observação consciente da vida marinha e na proteção dos recifes de corais de Cabedelo.",
     cidade: "Cabedelo",
     estado: "PB",
-    preco: 120.00,
-    imagem: "https://originalexperience.com.br/wp-content/uploads/2022/10/MARACAJAU-MERGULHO-CATAMARA-3.jpg",
+    preco: 0,
+    imagem: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Mergulho", "Observação", "Fotografia"],
     duracao: "4 horas",
@@ -81,8 +81,8 @@ const passeiosData: Passeio[] = [
     descricao: "Uma imersão na cultura e natureza das terras indígenas Potiguara. Caminhadas por trilhas ancestrais, banhos de rio e vivência com a comunidade local.", 
     cidade: "Baía da Traição",
     estado: "PB",
-    preco: 100.00,
-    imagem: "https://trilhasdospotiguaras.pb.gov.br/media/filer_public_thumbnails/filer_public/15/a3/15a3b7b2-ae38-418f-958e-03fd5c604e27/barra-do-mamanguape-bg.jpg__1700x901_q95_crop_subsampling-2_upscale.jpg",
+    preco: 0,
+    imagem: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Cultura Indígena", "Trilha", "Banho de Rio"],
     duracao: "5 horas",
@@ -102,8 +102,8 @@ const passeiosData: Passeio[] = [
     descricao: "Expedição completa pelo território Potiguara. Inclui oficina de artesanato, pintura corporal com urucum e pajelança, promovendo o etnoturismo responsável.", 
     cidade: "Baía da Traição",
     estado: "PB",
-    preco: 250.00,
-    imagem: "https://mytravelimages.blob.core.windows.net/producao0015f00000jfzvjaaw/logo.png",
+    preco: 0,
+    imagem: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Etnoturismo", "Oficinas", "Cultura"],
     duracao: "8 horas",
@@ -122,8 +122,8 @@ const passeiosData: Passeio[] = [
     descricao: "Caminhada guiada pela Mata do Buraquinho, um dos maiores remanescentes de Mata Atlântica em área urbana no Brasil, focada na botânica e história local.",
     cidade: "João Pessoa",
     estado: "PB",
-    preco: 20.00,
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU10onrV1-CBxXp94w5B3Jrx9RMMb8R05W2A&s",
+    preco: 0,
+    imagem: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Trilha Ecológica", "Educação Ambiental", "Observação de Aves"],
     duracao: "2 horas",
@@ -144,7 +144,7 @@ const passeiosData: Passeio[] = [
     cidade: "João Pessoa",
     estado: "PB",
     preco: 0,
-    imagem: "https://assent-2k25.wscom.com.br/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-19.03.05.jpeg",
+    imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1000",
     sustentavel: true,
     atividades: ["Visitação", "Cultura", "Fotografia"],
     duracao: "1 hora",
@@ -180,7 +180,7 @@ export default function PasseiosPage() {
   });
 
   // Função para ordenar passeios
-  const passeiosOrdenados = [...passeiosFiltrados].sort((a, b) => {
+  const restaurantesOrdenados = [...passeiosFiltrados].sort((a, b) => {
     switch (ordenacao) {
       case 'preco-menor':
         return a.preco - b.preco;
@@ -305,7 +305,7 @@ export default function PasseiosPage() {
               {/* Contador de resultados */}
               <div className="flex items-center justify-center sm:justify-start">
                 <span className="text-gray-600 font-medium">
-                  {t.passeios.foundCount.replace('{count}', passeiosOrdenados.length.toString())}
+                  {t.passeios.foundCount.replace('{count}', restaurantesOrdenados.length.toString())}
                 </span>
               </div>
             </div>
@@ -314,9 +314,9 @@ export default function PasseiosPage() {
 
         {/* Grid de passeios */}
         <div className="max-w-7xl mx-auto px-4">
-          {passeiosOrdenados.length > 0 ? (
+          {restaurantesOrdenados.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {passeiosOrdenados.map(passeio => (
+              {restaurantesOrdenados.map(passeio => (
                 <PasseioCard key={passeio.id} passeio={passeio} pontosUsuario={pontosUsuario} />
               ))}
             </div>

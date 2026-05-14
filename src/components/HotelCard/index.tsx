@@ -107,26 +107,34 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
           {/* Preço original e com desconto */}
           <div className="flex justify-between items-center">
             <div>
-              {valorDesconto > 0 ? (
+              {hotel.preco > 0 ? (
                 <>
-                  <div className="text-sm text-gray-500 line-through">
-                    R$ {hotel.preco.toFixed(2)}
-                  </div>
-                  <div className="text-2xl font-bold text-green-600">
-                    R$ {precoComDesconto.toFixed(2)}
-                  </div>
+                  {valorDesconto > 0 ? (
+                    <>
+                      <div className="text-sm text-gray-500 line-through">
+                        R$ {hotel.preco.toFixed(2)}
+                      </div>
+                      <div className="text-2xl font-bold text-green-600">
+                        R$ {precoComDesconto.toFixed(2)}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="text-2xl font-bold text-green-600">
+                      R$ {hotel.preco.toFixed(2)}
+                    </div>
+                  )}
+                  <div className="text-xs text-gray-500">{t.common.perNight}</div>
                 </>
               ) : (
-                <div className="text-2xl font-bold text-green-600">
-                  R$ {hotel.preco.toFixed(2)}
+                <div className="text-lg font-bold text-green-600">
+                  {t.common.consultPrice}
                 </div>
               )}
-              <div className="text-xs text-gray-500">{t.common.perNight}</div>
             </div>
             
             {/* Informações do desconto */}
             <div className="text-right">
-              {valorDesconto > 0 && (
+              {hotel.preco > 0 && valorDesconto > 0 && (
                 <div className="text-sm font-bold text-red-600 mb-1">
                   -{hotel.porcentagem_desconto}%
                 </div>
@@ -139,7 +147,7 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
           </div>
           
           {/* Economia */}
-          {valorDesconto > 0 && (
+          {hotel.preco > 0 && valorDesconto > 0 && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-green-700">
@@ -153,7 +161,7 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
           )}
           
           {/* Aviso de pontos insuficientes */}
-          {!temPontosSuficientes && (
+          {hotel.preco > 0 && !temPontosSuficientes && (
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-yellow-700">
