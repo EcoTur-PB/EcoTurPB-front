@@ -215,7 +215,7 @@ export default function HoteisPage() {
         // Ordena pela maior economia (valor em reais)
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
-        return economyB - economyA;
+        return economiaB - economiaA;
       case 'pontos':
         return b.pontos_desconto - a.pontos_desconto;
       default:
