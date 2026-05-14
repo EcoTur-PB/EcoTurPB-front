@@ -60,7 +60,7 @@ export const translations = {
       medium: "Médio",
     },
     hoteis: {
-      title: "Hospedagens Sustentáveis",
+      title: "Hospedagens Sustentáveis na Paraíba",
       subtitle: "Descubra acomodações que se preocupam com o meio ambiente e oferecem experiências autênticas na Paraíba.",
       pointsAvailable: "{points} pontos disponíveis",
       usePointsDesc: "Use seus pontos para obter descontos!",
@@ -76,7 +76,7 @@ export const translations = {
       tryAdjustFilters: "Tente ajustar seus filtros de busca.",
     },
     passeios: {
-      title: "Atividades Sustentáveis",
+      title: "Passeios e Atividades Sustentáveis na Paraíba",
       subtitle: "Atividades locais, preservando o meio ambiente e promovendo a cultura paraibana. Participe de atividades gratuitas, ganhe pontos e ajude a preservar nosso ecossistema!",
       pointsAvailable: "{points} pontos disponíveis",
       usePointsDesc: "Use seus pontos para obter descontos!",
@@ -93,7 +93,7 @@ export const translations = {
       tryAdjustFilters: "Tente ajustar seus filtros de busca.",
     },
     restaurantes: {
-      title: "Restaurantes Sustentáveis",
+      title: "Restaurantes Sustentáveis na Paraíba",
       subtitle: "Saboreie pratos deliciosos em estabelecimentos que valorizam ingredientes locais e práticas sustentáveis na Paraíba.",
       pointsAvailable: "{points} pontos disponíveis",
       usePointsDesc: "Use seus pontos para obter descontos!",
@@ -186,7 +186,7 @@ export const translations = {
       medium: "Medium",
     },
     hoteis: {
-      title: "Sustainable Accommodations",
+      title: "Sustainable Accommodations in Paraíba",
       subtitle: "Discover accommodations that care about the environment and offer authentic experiences in Paraíba.",
       pointsAvailable: "{points} points available",
       usePointsDesc: "Use your points to get discounts!",
@@ -202,7 +202,7 @@ export const translations = {
       tryAdjustFilters: "Try adjusting your search filters.",
     },
     passeios: {
-      title: "Sustainable Activities",
+      title: "Sustainable Tours and Activities in Paraíba",
       subtitle: "Local activities, preserving the environment and promoting Paraíba's culture. Participate in free activities, earn points and help preserve our ecosystem!",
       pointsAvailable: "{points} points available",
       usePointsDesc: "Use your points to get discounts!",
@@ -219,7 +219,7 @@ export const translations = {
       tryAdjustFilters: "Try adjusting your search filters.",
     },
     restaurantes: {
-      title: "Sustainable Restaurants",
+      title: "Sustainable Restaurants in Paraíba",
       subtitle: "Enjoy delicious dishes in establishments that value local ingredients and sustainable practices in Paraíba.",
       pointsAvailable: "{points} points available",
       usePointsDesc: "Use your points to get discounts!",
