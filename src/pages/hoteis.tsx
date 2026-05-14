@@ -239,7 +239,7 @@ export default function HoteisPage() {
   return (
     <div className="bg-green-50 min-h-screen">
       <SEO 
-        title={t.hoteis.title} 
+        title={t.hoteis.seoTitle} 
         description={t.hoteis.subtitle}
       />
       <Header />

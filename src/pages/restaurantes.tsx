@@ -134,7 +134,7 @@ export default function RestaurantesPage() {
 
   return (
     <div className="bg-green-50 min-h-screen">
-      <SEO title={t.restaurantes.title} description={t.restaurantes.subtitle} />
+      <SEO title={t.restaurantes.seoTitle} description={t.restaurantes.subtitle} />
       <Header />
       
       <div className="pt-24 sm:pt-28 pb-8">

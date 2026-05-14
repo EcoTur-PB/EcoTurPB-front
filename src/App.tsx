@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='bg-green-50 top-0 left-0 min-h-screen'>
       <SEO 
-        title={t.home.heroTitle} 
+        title={t.home.seoTitle} 
         description={t.home.heroSubtitle}
       />
       <Header />

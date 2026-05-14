@@ -218,7 +218,7 @@ export default function PasseiosPage() {
 
   return (
     <div className="bg-blue-50 min-h-screen">
-      <SEO title={t.passeios.title} description={t.passeios.subtitle} />
+      <SEO title={t.passeios.seoTitle} description={t.passeios.subtitle} />
       <Header />
       
       <div className="pt-24 sm:pt-28 pb-8">
