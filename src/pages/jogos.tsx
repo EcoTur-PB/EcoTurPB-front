@@ -1,4 +1,5 @@
 import { Header } from '../components/Header'
+import { SEO } from '../components/SEO'
 import { SportsEsportsRounded, EmojiEventsRounded, QuizRounded, SearchRounded } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -8,6 +9,7 @@ function JogosPage() {
 
   return (
     <div className='bg-green-50 min-h-screen'>
+      <SEO title={t.jogos.title} description={t.jogos.subtitle} />
       <Header />
       
       <div className="pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-8 md:pb-12 lg:pb-16 px-4 md:px-8">

@@ -4,17 +4,22 @@ import { ApartmentRounded, EmojiEventsRounded, QuizRounded, RestaurantRounded, S
 import { Link } from 'react-router-dom'
 
 import { useLanguage } from './contexts/LanguageContext'
+import { SEO } from './components/SEO'
 
 function App() {
   const { t } = useLanguage();
 
   return (
     <div className='bg-green-50 top-0 left-0 min-h-screen'>
+      <SEO 
+        title={t.home.heroTitle} 
+        description={t.home.heroSubtitle}
+      />
       <Header />
 
       <div className="first-page pt-24 sm:pt-24 md:pt-32 lg:pt-36 pb-8 md:pb-12 lg:pb-16 grid grid-cols-1 gap-6 md:gap-8 justify-center items-center px-4 md:px-8">
         <div className="left flex flex-col justify-center gap-4 md:gap-8 lg:gap-4 items-center">
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 md:px-8 lg:px-16 xl:px-32 font-bold opacity-85 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-4 md:px-8 lg:px-16 xl:px-32 font-bold opacity-85 text-center">
             {t.home.heroTitle.split(' ').map((word, i) => (
               <span key={i}>
                 {['Paraíba', 'cultura', 'consciência', 'culture', 'awareness'].includes(word.replace(/[.,]/g, '')) ? (
@@ -23,7 +28,7 @@ function App() {
                 {' '}
               </span>
             ))}
-          </p>
+          </h1>
           <p className="text-lg mt-4 md-2 md:text-xl lg:text-2xl px-4 md:px-8 lg:px-16 xl:px-32 text-gray-700 text-center">
             {t.home.heroSubtitle}
           </p>
@@ -34,14 +39,14 @@ function App() {
         <div className="right px-4 md:px-12 lg:px-24 xl:px-48 rounded-lg w-full flex justify-center items-center">
           <img className='object-cover w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-256 h-64 md:h-80 lg:h-96 rounded-2xl md:rounded-3xl shadow-lg' 
             src="https://images.unsplash.com/photo-1642670778570-d7d6e462b98c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-          alt="" />
+          alt="Vista aérea de uma praia paradisíaca na Paraíba" />
         </div>
       </div>
 
       <div className="second-page flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-white px-4 md:px-8">
-        <div className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
           {t.home.sustainableServices}
-        </div>
+        </h2>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
           {t.home.sustainableServicesDesc}
         </div>
@@ -52,7 +57,7 @@ function App() {
             <div className="icon bg-blue-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <SailingRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-blue-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">{t.home.sustainableActivities}</div>
+            <h3 className="title text-2xl md:text-3xl lg:text-4xl text-blue-800 font-semibold">{t.home.sustainableActivities}</h3>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               {t.home.sustainableActivitiesDesc}
             </div>
@@ -68,7 +73,7 @@ function App() {
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <ApartmentRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-green-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableAccommodations}</div>
+            <h3 className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableAccommodations}</h3>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               {t.home.sustainableAccommodationsDesc}
             </div>
@@ -84,7 +89,7 @@ function App() {
             <div className="icon bg-green-100 w-fit h-fit p-3 md:p-4 rounded-md mb-3 md:mb-4">
               <RestaurantRounded className="min-w-6 min-h-6 md:min-w-8 md:min-h-8 text-green-600" />
             </div>
-            <div className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableRestaurants}</div>
+            <h3 className="title text-2xl md:text-3xl lg:text-4xl text-green-800 font-semibold">{t.home.sustainableRestaurants}</h3>
             <div className="description text-gray-500 text-base md:text-lg font-medium">
               {t.home.sustainableRestaurantsDesc}
             </div>
@@ -101,9 +106,9 @@ function App() {
       </div>
 
       <div className="second-page flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 bg-white px-4 md:px-8">
-        <div className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 py-4 md:py-6 lg:py-8 text-center'>
           {t.home.knowParaiba}
-        </div>
+        </h2>
         <div className="description text-lg md:text-xl lg:text-2xl text-gray-700 px-4 md:px-12 lg:px-24 xl:px-48 text-center">
           {t.home.knowParaibaDesc}
         </div>

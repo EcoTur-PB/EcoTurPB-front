@@ -11,6 +11,7 @@ import Termo from './pages/Jogos/Termo.tsx'
 import CacaPalavras from './pages/Jogos/CacaPalavras.tsx'
 
 import { LanguageProvider } from './contexts/LanguageContext.tsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 const router = createBrowserRouter([
   {
@@ -49,8 +50,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <LanguageProvider>
-      <RouterProvider router={router}/>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <RouterProvider router={router}/>
+      </LanguageProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

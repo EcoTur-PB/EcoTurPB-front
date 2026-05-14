@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
+import { SEO } from '../components/SEO';
 import { RestauranteCard, Restaurante } from '../components/RestauranteCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
 import { Moeda } from '../components/Moeda';
@@ -133,6 +134,7 @@ export default function RestaurantesPage() {
 
   return (
     <div className="bg-green-50 min-h-screen">
+      <SEO title={t.restaurantes.title} description={t.restaurantes.subtitle} />
       <Header />
       
       <div className="pt-24 sm:pt-28 pb-8">

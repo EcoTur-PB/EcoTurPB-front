@@ -3,6 +3,7 @@ import { Header } from '../components/Header';
 import { HotelCard, Hotel } from '../components/HotelCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
 import { Moeda } from '../components/Moeda';
+import { SEO } from '../components/SEO';
 
 // Dados mockados dos hotéis
   const hoteisData: Hotel[] = [
@@ -237,6 +238,10 @@ export default function HoteisPage() {
 
   return (
     <div className="bg-green-50 min-h-screen">
+      <SEO 
+        title={t.hoteis.title} 
+        description={t.hoteis.subtitle}
+      />
       <Header />
       
       <div className="pt-24 sm:pt-28 pb-8">
