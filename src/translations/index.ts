@@ -7,6 +7,7 @@ export const translations = {
       perNight: "por noite",
       perPerson: "por pessoa",
       averagePrice: "preço médio",
+      consultPrice: "Consultar valor no local",
       pointsRequired: "necessários",
       points: "pontos",
       youSave: "Você economiza {amount}",
