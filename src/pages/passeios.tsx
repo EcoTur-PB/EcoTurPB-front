@@ -7,7 +7,7 @@ import { Moeda } from '../components/Moeda';
 
 // Dados reais dos passeios com imagens oficiais e específicas da Paraíba (Fontes: PBTur, Governo PB, Secom-JP)
 const passeiosData: Passeio[] = [
-  {
+{
     id: 1,
     nome: "Mutirão para limpeza de praias",
     descricao: "Participe ativamente da preservação do nosso litoral com o Projeto Mares sem Plástico em João Pessoa. Ação de limpeza e conscientização ambiental.",
@@ -23,9 +23,9 @@ const passeiosData: Passeio[] = [
     porcentagem_desconto: 0,
     textoRegiao: "As praias de João Pessoa são cartões-postais vitais para a biodiversidade local.",
     boasPraticas: ['Uso de sacos biodegradáveis', 'Triagem de resíduos', 'Destinação para reciclagem'],
-    siteUrl: "https://maressemplastico.com.br"
+    siteUrl: "https://maressemplastico.com.br/"
   },
-  {
+{
     id: 2,
     nome: "Projeto Peixe-Boi Marinho",
     descricao: "Visita guiada ao santuário de um dos mamíferos aquáticos mais ameaçados do Brasil, na Barra de Mamanguape. Gestão pela Fundação Mamíferos Aquáticos.",
@@ -39,9 +39,9 @@ const passeiosData: Passeio[] = [
     grupo_max: 10,
     pontos_desconto: 20,
     porcentagem_desconto: 15,
-    siteUrl: "https://www.vivaopeixeboi.org"
+    siteUrl: "https://maps.app.goo.gl/emW8pevSeHkhFPHJ6"
   },
-  {
+{
     id: 3,
     nome: "Mergulho em Areia Vermelha",
     descricao: "Exploração consciente do Parque Estadual Marinho de Areia Vermelha. Banco de areia que emerge na maré baixa com águas cristalinas.",
@@ -54,9 +54,10 @@ const passeiosData: Passeio[] = [
     duracao: "4 horas",
     grupo_max: 12,
     pontos_desconto: 30,
-    porcentagem_desconto: 20
+    porcentagem_desconto: 20,
+    siteUrl: "https://www.google.com/maps/place/Ilha+de+Areia+Vermelha"
   },
-  {
+{
     id: 6,
     nome: "Lajedo de Pai Mateus",
     descricao: "Ícone do Cariri Paraibano. Elevações graníticas arredondadas em um cenário místico e inesquecível de Cabaceiras.",
@@ -69,9 +70,10 @@ const passeiosData: Passeio[] = [
     duracao: "3 horas",
     grupo_max: 20,
     pontos_desconto: 35,
-    porcentagem_desconto: 15
+    porcentagem_desconto: 15,
+    siteUrl: "https://maps.app.goo.gl/PT3PLEjAGQw2uQRa8"
   },
-  {
+{
     id: 7,
     nome: "Pôr do Sol no Jacaré",
     descricao: "Patrimônio cultural da Paraíba. O som do Bolero de Ravel de Jurandy do Sax enquanto o sol se põe sobre o Rio Paraíba.",
@@ -84,9 +86,10 @@ const passeiosData: Passeio[] = [
     duracao: "2 horas",
     grupo_max: 100,
     pontos_desconto: 15,
-    porcentagem_desconto: 10
+    porcentagem_desconto: 10,
+    siteUrl: "https://maps.app.goo.gl/fJLoWfHrLUAuUrfx5"
   },
-  {
+{
     id: 8,
     nome: "Piscinas Naturais do Seixas",
     descricao: "Mergulho nas piscinas formadas por arrecifes no ponto mais oriental das Américas. Observação consciente da vida marinha.",
@@ -99,9 +102,10 @@ const passeiosData: Passeio[] = [
     duracao: "3 horas",
     grupo_max: 15,
     pontos_desconto: 25,
-    porcentagem_desconto: 15
+    porcentagem_desconto: 15,
+    siteUrl: "https://maps.app.goo.gl/LqaN2WLMmALi65j1A"
   },
-  {
+{
     id: 9,
     nome: "Parque Estadual da Pedra da Boca",
     descricao: "Santuário de ecoturismo e aventura com formações rochosas impressionantes e trilhas de diversos níveis de dificuldade.",
@@ -114,12 +118,13 @@ const passeiosData: Passeio[] = [
     duracao: "6 horas",
     grupo_max: 12,
     pontos_desconto: 30,
-    porcentagem_desconto: 20
+    porcentagem_desconto: 20,
+    siteUrl: "https://maps.app.goo.gl/7ay4dwJfHQRTFjzF6"
   },
   {
     id: 10,
-    nome: "Centro Histórico de João Pessoa",
-    descricao: "Visita ao Centro Cultural São Francisco e ladeiras do Varadouro. Patrimônio barroco-tropical único no Brasil.",
+    nome: "Hotel Globo",
+    descricao: "Construído em 1929, o Hotel Globo é um marco da arquitetura de João Pessoa, oferecendo uma das vistas mais belas do pôr do sol sobre o Rio Sanhauá.",
     cidade: "João Pessoa",
     estado: "PB",
     preco: 0,
@@ -129,9 +134,10 @@ const passeiosData: Passeio[] = [
     duracao: "4 horas",
     grupo_max: 20,
     pontos_desconto: 10,
-    porcentagem_desconto: 50
+    porcentagem_desconto: 50,
+    siteUrl: "https://turismo.joaopessoa.pb.gov.br/o-que-fazer/pontos-turisticos/monumentos-historicos/hotel-globo/"
   },
-  {
+{
     id: 11,
     nome: "Sítio Arqueológico Pedra do Ingá",
     descricao: "Monumento arqueológico com inscrições rupestres milenares únicas (itacoatiaras). Um dos maiores mistérios do Cariri.",
@@ -144,9 +150,10 @@ const passeiosData: Passeio[] = [
     duracao: "2 horas",
     grupo_max: 25,
     pontos_desconto: 20,
-    porcentagem_desconto: 10
+    porcentagem_desconto: 10,
+    siteUrl: "https://maps.app.goo.gl/rLnSYBxGJRqb4WrU9"
   },
-  {
+{
     id: 12,
     nome: "Vale dos Dinossauros",
     descricao: "Um dos maiores sítios paleontológicos do mundo. Pegadas fossilizadas de diversas espécies em Sousa, no sertão paraibano.",
@@ -159,9 +166,10 @@ const passeiosData: Passeio[] = [
     duracao: "3 horas",
     grupo_max: 30,
     pontos_desconto: 20,
-    porcentagem_desconto: 10
+    porcentagem_desconto: 10,
+    siteUrl: "https://maps.app.goo.gl/f3eXepsio3AknqjW8"
   },
-  {
+{
     id: 14,
     nome: "Barra de Camaratuba - Foz do Rio",
     descricao: "Onde o Rio Camaratuba encontra o mar. Vila de pescadores focada em sustentabilidade e ecoturismo em Mataraca.",
@@ -174,9 +182,10 @@ const passeiosData: Passeio[] = [
     duracao: "5 horas",
     grupo_max: 10,
     pontos_desconto: 30,
-    porcentagem_desconto: 15
+    porcentagem_desconto: 15,
+    siteUrl: "https://www.google.com/maps/place/Barra+de+Camaratuba"
   },
-  {
+{
     id: 15,
     nome: "Cachoeira do Roncador",
     descricao: "Entre Bananeiras e Pirpirituba, uma queda d'água exuberante no coração do Brejo Paraibano. Turismo rural responsável.",
@@ -189,9 +198,10 @@ const passeiosData: Passeio[] = [
     duracao: "4 horas",
     grupo_max: 15,
     pontos_desconto: 25,
-    porcentagem_desconto: 15
+    porcentagem_desconto: 15,
+    siteUrl: "https://maps.app.goo.gl/bDfV2RH9pB8pJF4i8"
   },
-  {
+{
     id: 16,
     nome: "Trilha no Jardim Botânico",
     descricao: "Mata do Buraquinho. Uma reserva de Mata Atlântica em plena área urbana de João Pessoa para trilhas e educação ambiental.",
@@ -204,9 +214,10 @@ const passeiosData: Passeio[] = [
     duracao: "2 horas",
     grupo_max: 20,
     pontos_desconto: 10,
-    porcentagem_desconto: 50
+    porcentagem_desconto: 50,
+    siteUrl: "https://maps.app.goo.gl/zYZGFHwSbHK9Qq1F9"
   },
-  {
+{
     id: 17,
     nome: "Areia - Rota dos Engenhos",
     descricao: "Caminhos históricos da cachaça e cultura em Areia. Patrimônio histórico nacional com visitas a engenhos produtivos.",
@@ -219,9 +230,10 @@ const passeiosData: Passeio[] = [
     duracao: "6 horas",
     grupo_max: 15,
     pontos_desconto: 25,
-    porcentagem_desconto: 10
+    porcentagem_desconto: 10,
+    siteUrl: "https://www.google.com/maps/search/Areia+PB+Centro+Hist%C3%B3rico"
   },
-  {
+{
     id: 19,
     nome: "Farol do Cabo Branco",
     descricao: "Símbolo geográfico extremo. O farol triangular na falésia do Cabo Branco, ponto mais oriental das Américas.",
@@ -234,9 +246,10 @@ const passeiosData: Passeio[] = [
     duracao: "1 hora",
     grupo_max: 50,
     pontos_desconto: 5,
-    porcentagem_desconto: 0
+    porcentagem_desconto: 0,
+    siteUrl: "https://www.google.com/maps/place/Farol+do+Cabo+Branco"
   },
-  {
+{
     id: 20,
     nome: "Mercado de Artesanato Paraibano (MAP)",
     descricao: "O coração do artesanato paraibano. Rendas, algodão colorido e cerâmica em um prédio icônico em Tambaú.",
@@ -249,7 +262,24 @@ const passeiosData: Passeio[] = [
     duracao: "2 horas",
     grupo_max: 100,
     pontos_desconto: 10,
-    porcentagem_desconto: 5
+    porcentagem_desconto: 5,
+    siteUrl: "https://www.google.com/maps/place/Mercado+de+Artesanato+Paraibano"
+  },
+  {
+    id: 21,
+    nome: "Estátua de Iemanjá",
+    descricao: "Importante monumento religioso e cultural localizado na orla de Cabo Branco, símbolo da fé e tradição afro-brasileira na Paraíba.",
+    cidade: "João Pessoa",
+    estado: "PB",
+    preco: 0,
+    imagem: "https://assent-2k25.wscom.com.br/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-19.03.05.jpeg",
+    sustentavel: true,
+    atividades: ["Cultura", "Religiosidade", "Contemplação"],
+    duracao: "1 hora",
+    grupo_max: 50,
+    pontos_desconto: 5,
+    porcentagem_desconto: 0,
+    siteUrl: "https://www.google.com/maps/search/?api=1&query=Estátua+de+Iemanjá+João+Pessoa"
   }
 ];
 
