@@ -35,9 +35,9 @@ export const translations = {
       loginSuccess: "Obrigado! Você receberá o código para login via Whatsapp",
     },
     home: {
-      seoTitle: "EcoTurPB - Turismo Sustentável e Experiências na Paraíba",
+      seoTitle: "Turismo Sustentável na Paraíba | EcoTurPB",
       heroTitle: "Aproveite a Paraíba do jeito certo com cultura e consciência",
-      heroSubtitle: "Atividades locais com cultura, responsabilidade e sustentabilidade.",
+      heroSubtitle: "Turismo sustentável na Paraíba: atividades locais com cultura, responsabilidade e preservação ambiental.",
       discoverNow: "Descubra agora",
       sustainableServices: "Acesse serviços sustentáveis",
       sustainableServicesDesc: "Oferecemos descontos em restaurantes, hospedagens e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados",
@@ -165,9 +165,9 @@ export const translations = {
       loginSuccess: "Thank you! You will receive the login code via WhatsApp",
     },
     home: {
-      seoTitle: "EcoTurPB - Sustainable Tourism and Experiences in Paraíba",
+      seoTitle: "Sustainable Tourism in Paraíba | EcoTurPB",
       heroTitle: "Enjoy Paraíba the right way with culture and awareness",
-      heroSubtitle: "Local activities with culture, responsibility, and sustainability.",
+      heroSubtitle: "Sustainable tourism in Paraíba: local activities with culture, responsibility, and environmental preservation.",
       discoverNow: "Discover now",
       sustainableServices: "Access sustainable services",
       sustainableServicesDesc: "We offer discounts at sustainable restaurants, accommodations, and tourism services, with discounts based on accumulated points",

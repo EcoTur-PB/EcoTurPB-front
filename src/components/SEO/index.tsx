@@ -25,14 +25,22 @@ export const SEO = ({
   const defaultDescription = 'Aproveite a Paraíba do jeito certo com cultura e consciência. Descubra hospedagens, passeios e restaurantes sustentáveis.';
   const metaDescription = description || defaultDescription;
   const url = window.location.href;
+  const keywords = "turismo sustentável paraíba, ecoturismo paraíba, sustentabilidade, paraíba, joão pessoa, ecoturpb, viagens sustentáveis, turismo responsável";
 
   return (
     <Helmet>
       {/* Standard metadata */}
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
+      <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical || url} />
       <html lang={language} />
+
+      {/* Geo Tags */}
+      <meta name="geo.region" content="BR-PB" />
+      <meta name="geo.placename" content="Paraíba" />
+      <meta name="geo.position" content="-7.119495;-34.845012" />
+      <meta name="ICBM" content="-7.119495, -34.845012" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
