@@ -19,7 +19,7 @@ const restaurantesData: Restaurante[] = [
     especialidades: ["Pizzas", "Regional", "Artesanais"],
     horario_funcionamento: "18:30 - 22:00",
     avaliacao: 4.8,
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 15,
     textoRegiao: "A Barra de Mamanguape é um destino de ecoturismo isolado, onde o rio se encontra com o mar. A vila preserva um estilo de vida simples e integrado à natureza, sendo base para o Projeto Peixe-Boi.",
     boasPraticas: [
@@ -43,7 +43,7 @@ const restaurantesData: Restaurante[] = [
     especialidades: ['Natural', 'Saudável', 'Orgânica'],
     horario_funcionamento: "11:30 - 15:00",
     avaliacao: 4.9,
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 20,
     textoRegiao: "Comer bem em João Pessoa também significa escolher opções saudáveis. A Oca Natural se destaca pela qualidade dos ingredientes vindos diretamente de produtores orgânicos da região.",
     boasPraticas: [
@@ -66,7 +66,7 @@ const restaurantesData: Restaurante[] = [
     especialidades: ["Regional", "Contemporânea"],
     horario_funcionamento: "12:00 - 23:00",
     avaliacao: 4.7,
-    pontos_desconto: 25,
+     // pontos_desconto: 25,
     porcentagem_desconto: 15,
     textoRegiao: "Localizado no Jardim Oceania, o Buckminster é um exemplo de como a arquitetura pode respeitar a natureza, mantendo a vegetação original como parte do ambiente.",
     boasPraticas: [
@@ -89,7 +89,7 @@ const restaurantesData: Restaurante[] = [
     especialidades: ["Autoral", "Contemporânea", "Sazonal"],
     horario_funcionamento: "19:00 - 23:00",
     avaliacao: 4.9,
-    pontos_desconto: 40,
+     // pontos_desconto: 40,
     porcentagem_desconto: 20,
     textoRegiao: "No bairro do Bessa, o Quintal Restô oferece uma experiência intimista onde cada prato conta uma história sobre os produtores e a terra paraibana.",
     boasPraticas: [
@@ -112,7 +112,7 @@ const restaurantesData: Restaurante[] = [
     especialidades: ["Vegetariana", "Natural"],
     horario_funcionamento: "12:00 - 21:00",
     avaliacao: 4.8,
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 15,
     textoRegiao: "Localizada em Manaíra, a Casa de Nara prova que a culinária à base de plantas pode ser sofisticada e extremamente saborosa, com uma vista privilegiada do mar.",
     boasPraticas: [
@@ -162,8 +162,8 @@ export default function RestaurantesPage() {
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
         return economiaB - economiaA;
-      case 'pontos':
-        return b.pontos_desconto - a.pontos_desconto;
+      // case 'pontos':
+      //   return (b.pontos_desconto ?? 0) - (a.pontos_desconto ?? 0);
       case 'avaliacao':
         return b.avaliacao - a.avaliacao;
       default:
@@ -265,7 +265,7 @@ export default function RestaurantesPage() {
                   <option value="preco-menor">{t.restaurantes.sortPriceLow}</option>
                   <option value="preco-maior">{t.restaurantes.sortPriceHigh}</option>
                   <option value="economia">{t.restaurantes.sortEconomy}</option>
-                  <option value="pontos">{t.restaurantes.sortPoints}</option>
+                  {/* <option value="pontos">{t.restaurantes.sortPoints}</option> */}
                   <option value="avaliacao">{t.restaurantes.sortRating}</option>
                 </select>
               </div>

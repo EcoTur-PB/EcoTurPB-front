@@ -17,7 +17,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://lh3.googleusercontent.com/p/AF1QipO8JbREnaxbOJ_zrRfAJI6MyiCusaMDZ4pS08fi=s1360-w1360-h1020-rw",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Café da Manhã Incluso", "Trilhas Guiadas", "Varanda com Rede", "Cozinha Equipada"],
-    pontos_desconto: 40,
+     // pontos_desconto: 40,
     porcentagem_desconto: 15,
     textoRegiao: "Bananeiras, no Brejo Paraibano, é um refúgio verde a mais de 500m de altitude, com clima ameno, mata atlântica preservada e rica cultura regional. É um dos destinos de ecoturismo mais bem avaliados do interior da Paraíba.",
     boasPraticas: [
@@ -39,7 +39,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEw1BTt0aiKmoXr3r_dCQBjkbiV8io0Zbk5h1BHwlsKP9lagkDPJV5OBnDaNbv94F6PmrNzgr4W5gLph6ygTZG5Udn6naZj3IB6_67Pt4kj2QKft3xoVyHPuKVvaH2K0NIPkyh2Cd_ylLM=w324-h312-n-k-no",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Café da Manhã Incluso", "Piscina", "Fogueira", "Estacionamento"],
-    pontos_desconto: 35,
+     // pontos_desconto: 35,
     porcentagem_desconto: 10,
     textoRegiao: "Areia é a cidade mais antiga do Brejo Paraibano, berço de personalidades históricas como José Américo de Almeida. A região possui cachoeiras, engenhos centenários, a Mata do Pau-Ferro e clima fresco durante todo o ano.",
     boasPraticas: [
@@ -61,7 +61,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://cf.bstatic.com/xdata/images/hotel/square600/514264069.webp?k=ec1b755c26255f7899e17dcffca3cff2ccddb303add5f0c00db87ed86edcce51&o=",
     sustentavel: true,
     comodidades: ["Café da Manhã Incluso", "Refeições Regionais", "Banho de Rio", "Fogueira", "Observação de Estrelas"],
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 10,
     textoRegiao: "O Cariri Paraibano é uma das regiões mais secas e encantadoras do Brasil. Com formações rochosas únicas, a caatinga em toda sua riqueza e o céu mais estrelado do Nordeste, é destino de quem busca turismo de natureza autêntico e desconectado.",
     boasPraticas: [
@@ -83,7 +83,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://pousadamatutosonhador.com/wp-content/uploads/2022/08/5-1.jpg",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Café da Manhã Incluso", "Estacionamento", "Área de Lazer"],
-    pontos_desconto: 45,
+     // pontos_desconto: 45,
     porcentagem_desconto: 15,
     textoRegiao: "Cabaceiras é o município com menor índice pluviométrico do Brasil e palco do famoso Festival de Cinema de Cabaceiras. O Lajedo de Pai Mateus, com suas rochas graníticas e figuras rupestres, é patrimônio natural e histórico único.",
     boasPraticas: [
@@ -105,7 +105,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/7f/7b/25/rancho-da-ema-hotel.jpg?w=1400&h=-1&s=1",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Café da Manhã Incluso", "Estacionamento", "Área de Lazer", "Aviário"],
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 10,
     textoRegiao: "Cabaceiras e o Cariri Paraibano formam um dos cenários mais cinematográficos do sertão nordestino. Fauna típica como emas, teiús e preás coexistem com o turismo rural responsável em propriedades que preservam a caatinga.",
     boasPraticas: [
@@ -127,7 +127,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://lemeshotel.com.br/wp-content/uploads/casa-riomar-praia-do-arrombado-300x200.jpg",
     sustentavel: true,
     comodidades: ["Camping", "Trilhas Ecológicas", "Banho de Argila", "Piscina Natural", "Caiaque"],
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 10,
     textoRegiao: "O litoral sul da Paraíba, no município do Conde, guarda praias intocadas como Tabatinga, Tambaba e Coqueirinho. O Território Macuxí representa a aliança entre preservação ambiental, cultura indígena e turismo de base comunitária.",
     boasPraticas: [
@@ -149,7 +149,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://lh3.googleusercontent.com/gps-proxy/ALd4DhEeQkUxrdKHZvlVsLgrUwTccoc1Nk7bOv7Vdslo8L6TBKWY3KRYByaPL8ebbC2e67iTisuTsEeAqIE2WMU_vVXhknqfmBPNqWYNW3l2GhPFeJJwilbWlZ88CAShtNfrRm0_p27gfRDfgVGx5UMkEz7Co8UefxMBWEVx42d_nKIQDMe_X-3ZMReLNN2p=w324-h312-n-k-no",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Cozinha Compartilhada", "Área de Convivência", "Estacionamento para Bikes", "Quartos Compartilhados e Privativos"],
-    pontos_desconto: 15,
+     // pontos_desconto: 15,
     porcentagem_desconto: 10,
     textoRegiao: "João Pessoa, capital da Paraíba, é considerada uma das cidades mais arborizadas do Brasil e oferece praias de águas mornas, o Parque Estadual Marinho de Areia Vermelha e uma gastronomia nordestina rica e diversa.",
     boasPraticas: [
@@ -171,7 +171,7 @@ import { SEO } from '../components/SEO';
     imagem: "https://instagram.fjpa1-1.fna.fbcdn.net/v/t51.82787-15/670980095_18588272182061356_3997343901691140570_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=101&ig_cache_key=Mzg4MDk2OTk2MDcwMTE0MjE4MjE4NTg4MjcyMTc5MDYxMzU2.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=TyCRe0KpADIQ7kNvwG31b0H&_nc_oc=AdrT6v_bHJJ6N0s1tNhfbx85kTeUttoOAUO7gGj1SMX5yqfgdbxb4EpTP-Ov04ix1TNLtuDxZe2D1yEax6r-jAnT&_nc_ad=z-m&_nc_cid=1295&_nc_zt=23&_nc_ht=instagram.fjpa1-1.fna&_nc_gid=qHG1_W2XdkBm_-_IdRaFng&_nc_ss=7a22e&oh=00_Af63jT1aLEkMA5MI-69JlvCFCsVT4OaO2CPTmY6yC-7YSw&oe=6A07CD78",
     sustentavel: true,
     comodidades: ["Wi-Fi", "Restaurante", "Spa", "Piscina", "Café da Manhã Incluso", "Estacionamento"],
-    pontos_desconto: 60,
+     // pontos_desconto: 60,
     porcentagem_desconto: 20,
     textoRegiao: "Bananeiras é o coração do Brejo Paraibano, com clima serrano, temperatura média de 19°C à noite, vales verdes e uma rica herança da era do açúcar e do algodão. A Estação Ferroviária, patrimônio histórico, foi revitalizada como símbolo do turismo sustentável da região.",
     boasPraticas: [
@@ -222,8 +222,8 @@ export default function HoteisPage() {
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
         return economiaB - economiaA;
-      case 'pontos':
-        return b.pontos_desconto - a.pontos_desconto;
+      // case 'pontos':
+      //   return (b.pontos_desconto ?? 0) - (a.pontos_desconto ?? 0);
       default:
         return a.nome.localeCompare(b.nome);
     }
@@ -327,7 +327,7 @@ export default function HoteisPage() {
                   <option value="preco-menor">{t.hoteis.sortPriceLow}</option>
                   <option value="preco-maior">{t.hoteis.sortPriceHigh}</option>
                   <option value="economia">{t.hoteis.sortEconomy}</option>
-                  <option value="pontos">{t.hoteis.sortPoints}</option>
+                  {/* <option value="pontos">{t.hoteis.sortPoints}</option> */}
                 </select>
               </div>
 

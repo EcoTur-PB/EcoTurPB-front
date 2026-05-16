@@ -19,7 +19,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Limpeza", "Educação Ambiental", "Conscientização"],
     duracao: "3 horas",
     grupo_max: 50,
-    pontos_desconto: 0,
+     // pontos_desconto: 0,
     porcentagem_desconto: 0,
     textoRegiao: "As praias de João Pessoa são cartões-postais vitais para a biodiversidade local.",
     boasPraticas: ['Uso de sacos biodegradáveis', 'Triagem de resíduos', 'Destinação para reciclagem'],
@@ -37,7 +37,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Observação", "Educação Ambiental", "Navegação"],
     duracao: "3 horas",
     grupo_max: 10,
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 15,
     siteUrl: "https://maps.app.goo.gl/emW8pevSeHkhFPHJ6"
   },
@@ -53,7 +53,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Mergulho", "Observação", "Fotografia"],
     duracao: "4 horas",
     grupo_max: 12,
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 20,
     siteUrl: "https://www.google.com/maps/place/Ilha+de+Areia+Vermelha"
   },
@@ -69,7 +69,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Geoturismo", "Fotografia", "Caminhada"],
     duracao: "3 horas",
     grupo_max: 20,
-    pontos_desconto: 35,
+     // pontos_desconto: 35,
     porcentagem_desconto: 15,
     siteUrl: "https://maps.app.goo.gl/PT3PLEjAGQw2uQRa8"
   },
@@ -85,7 +85,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Cultura", "Música", "Contemplação"],
     duracao: "2 horas",
     grupo_max: 100,
-    pontos_desconto: 15,
+     // pontos_desconto: 15,
     porcentagem_desconto: 10,
     siteUrl: "https://maps.app.goo.gl/fJLoWfHrLUAuUrfx5"
   },
@@ -101,7 +101,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Mergulho", "Navegação", "Observação"],
     duracao: "3 horas",
     grupo_max: 15,
-    pontos_desconto: 25,
+     // pontos_desconto: 25,
     porcentagem_desconto: 15,
     siteUrl: "https://maps.app.goo.gl/LqaN2WLMmALi65j1A"
   },
@@ -117,7 +117,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Trilha", "Rapel", "Escalada"],
     duracao: "6 horas",
     grupo_max: 12,
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 20,
     siteUrl: "https://maps.app.goo.gl/7ay4dwJfHQRTFjzF6"
   },
@@ -133,7 +133,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Cultura", "História", "Arquitetura"],
     duracao: "4 horas",
     grupo_max: 20,
-    pontos_desconto: 10,
+     // pontos_desconto: 10,
     porcentagem_desconto: 50,
     siteUrl: "https://turismo.joaopessoa.pb.gov.br/o-que-fazer/pontos-turisticos/monumentos-historicos/hotel-globo/"
   },
@@ -149,7 +149,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Arqueologia", "História", "Educação"],
     duracao: "2 horas",
     grupo_max: 25,
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 10,
     siteUrl: "https://maps.app.goo.gl/rLnSYBxGJRqb4WrU9"
   },
@@ -165,7 +165,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Paleontologia", "Educação", "Trilha"],
     duracao: "3 horas",
     grupo_max: 30,
-    pontos_desconto: 20,
+     // pontos_desconto: 20,
     porcentagem_desconto: 10,
     siteUrl: "https://maps.app.goo.gl/f3eXepsio3AknqjW8"
   },
@@ -181,7 +181,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Buggy Ecológico", "Banho de Rio", "Navegação"],
     duracao: "5 horas",
     grupo_max: 10,
-    pontos_desconto: 30,
+     // pontos_desconto: 30,
     porcentagem_desconto: 15,
     siteUrl: "https://www.google.com/maps/place/Barra+de+Camaratuba"
   },
@@ -197,7 +197,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Trilha", "Banho de Cachoeira", "Turismo Rural"],
     duracao: "4 horas",
     grupo_max: 15,
-    pontos_desconto: 25,
+     // pontos_desconto: 25,
     porcentagem_desconto: 15,
     siteUrl: "https://maps.app.goo.gl/bDfV2RH9pB8pJF4i8"
   },
@@ -213,7 +213,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Educação Ambiental", "Trilha", "Observação"],
     duracao: "2 horas",
     grupo_max: 20,
-    pontos_desconto: 10,
+     // pontos_desconto: 10,
     porcentagem_desconto: 50,
     siteUrl: "https://maps.app.goo.gl/zYZGFHwSbHK9Qq1F9"
   },
@@ -229,7 +229,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Cultura", "História", "Gastronomia"],
     duracao: "6 horas",
     grupo_max: 15,
-    pontos_desconto: 25,
+     // pontos_desconto: 25,
     porcentagem_desconto: 10,
     siteUrl: "https://www.google.com/maps/search/Areia+PB+Centro+Hist%C3%B3rico"
   },
@@ -245,7 +245,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Geoturismo", "Contemplação", "Fotografia"],
     duracao: "1 hora",
     grupo_max: 50,
-    pontos_desconto: 5,
+     // pontos_desconto: 5,
     porcentagem_desconto: 0,
     siteUrl: "https://www.google.com/maps/place/Farol+do+Cabo+Branco"
   },
@@ -261,7 +261,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Cultura", "Economia Local", "Artesanato"],
     duracao: "2 horas",
     grupo_max: 100,
-    pontos_desconto: 10,
+     // pontos_desconto: 10,
     porcentagem_desconto: 5,
     siteUrl: "https://www.google.com/maps/place/Mercado+de+Artesanato+Paraibano"
   },
@@ -277,7 +277,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Cultura", "Religiosidade", "Contemplação"],
     duracao: "1 hora",
     grupo_max: 50,
-    pontos_desconto: 5,
+     // pontos_desconto: 5,
     porcentagem_desconto: 0,
     siteUrl: "https://www.google.com/maps/search/?api=1&query=Estátua+de+Iemanjá+João+Pessoa"
   },
@@ -293,7 +293,7 @@ const passeiosData: Passeio[] = [
     atividades: ["Protagonismo e fortalecimento das mulheres", "Saberes ancestrais", "Espiritualidade Potiguara", "Defesa do território indígena", "Turismo comunitário responsável, ético e sustentável."],
     duracao: "1 hora",
     grupo_max: 50,
-    pontos_desconto: 5,
+     // pontos_desconto: 5,
     porcentagem_desconto: 0,
     siteUrl: "https://www.instagram.com/casadaluapb",
     parceiro_oficial: true
@@ -333,8 +333,8 @@ export default function PasseiosPage() {
         const economiaA = (a.preco * a.porcentagem_desconto) / 100;
         const economiaB = (b.preco * b.porcentagem_desconto) / 100;
         return economiaB - economiaA;
-      case 'pontos':
-        return  Number(b.pontos_desconto) - Number(a.pontos_desconto);
+      // case 'pontos':
+      //   return  Number(b.pontos_desconto) - Number(a.pontos_desconto);
       case 'duracao':
         const duracaoA = a.duracao === 'Dia Inteiro' ? 24 : parseInt(a.duracao.split(' ')[0]);
         const duracaoB = b.duracao === 'Dia Inteiro' ? 24 : parseInt(b.duracao.split(' ')[0]);
@@ -428,7 +428,7 @@ export default function PasseiosPage() {
                   <option value="preco-menor">{t.passeios.sortPriceLow}</option>
                   <option value="preco-maior">{t.passeios.sortPriceHigh}</option>
                   <option value="economia">{t.passeios.sortEconomy}</option>
-                  <option value="pontos">{t.passeios.sortPoints}</option>
+                  {/* <option value="pontos">{t.passeios.sortPoints}</option> */}
                   <option value="duracao">{t.passeios.sortDuration}</option>
                 </select>
               </div>

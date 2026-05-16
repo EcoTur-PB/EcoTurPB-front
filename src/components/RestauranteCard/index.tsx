@@ -15,7 +15,7 @@ export interface Restaurante {
   especialidades: string[];
   horario_funcionamento: string;
   avaliacao: number;
-  pontos_desconto: number;
+  pontos_desconto?: number;
   porcentagem_desconto: number;
   textoRegiao?: string;
   boasPraticas?: string[];
@@ -46,7 +46,7 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
   const { t } = useLanguage();
   
   // Verificar se o usuário tem pontos suficientes para o desconto
-  const temPontosSuficientes = pontosUsuario >= restaurante.pontos_desconto;
+  const temPontosSuficientes = pontosUsuario >= (restaurante.pontos_desconto ?? 0);
   const valorDesconto = temPontosSuficientes ? (restaurante.preco * restaurante.porcentagem_desconto) / 100 : 0;
   const precoComDesconto = restaurante.preco - valorDesconto;
   
@@ -162,16 +162,16 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
                   -{restaurante.porcentagem_desconto}%
                 </div>
               )}
-              <div className="text-sm font-medium text-green-600">
+              {/* <div className="text-sm font-medium text-green-600">
                 {restaurante.pontos_desconto} {t.common.points}
               </div>
-              <div className="text-xs text-gray-500">{t.common.pointsRequired}</div>
-            </div>
-          </div>
-          
-          {/* Economia */}
-          {restaurante.preco > 0 && valorDesconto > 0 && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-2">
+              <div className="text-xs text-gray-500">{t.common.pointsRequired}</div> */}
+              </div>
+              </div>
+
+              {/* Economia */}
+              {/* {restaurante.preco > 0 && valorDesconto > 0 && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-green-700">
                   {t.common.youSave.replace('{amount}', `R$ ${valorDesconto.toFixed(2)}`)}
@@ -180,12 +180,12 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
                   {t.common.usingPoints.replace('{points}', restaurante.pontos_desconto.toString())}
                 </div>
               </div>
-            </div>
-          )}
-          
-          {/* Aviso de pontos insuficientes */}
-          {restaurante.preco > 0 && !temPontosSuficientes && (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
+              </div>
+              )} */}
+
+              {/* Aviso de pontos insuficientes */}
+              {/* {restaurante.preco > 0 && !temPontosSuficientes && (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
               <div className="text-center">
                 <div className="text-sm font-medium text-yellow-700">
                   {t.common.discountUnavailable}
@@ -194,9 +194,8 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
                   {t.common.needPoints.replace('{points}', restaurante.pontos_desconto.toString()).replace('{userPoints}', pontosUsuario.toString())}
                 </div>
               </div>
-            </div>
-          )}
-        </div>
+              </div>
+              )} */}        </div>
 
         {/* Botão de detalhes */}
         <button 

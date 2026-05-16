@@ -15,7 +15,7 @@ export interface Passeio {
   atividades: string[];
   duracao: string;
   grupo_max: number;
-  pontos_desconto: string | number;
+  pontos_desconto?: string | number;
   porcentagem_desconto: number;
   textoRegiao?: string;
   boasPraticas?: string[];
@@ -167,15 +167,15 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
                     -{passeio.porcentagem_desconto}%
                   </div>
                 )}
-                <div className="text-sm font-medium text-blue-600">
+                {/* <div className="text-sm font-medium text-blue-600">
                   {passeio.pontos_desconto} {t.common.points}
                 </div>
-                <div className="text-xs text-gray-500">{t.common.pointsRequired}</div>
+                <div className="text-xs text-gray-500">{t.common.pointsRequired}</div> */}
               </div>
             </div>
             
             {/* Economia */}
-            {passeio.preco > 0 && valorDesconto > 0 && (
+            {/* {passeio.preco > 0 && valorDesconto > 0 && (
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-blue-700">
@@ -186,10 +186,10 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
             
             {/* Aviso de pontos insuficientes */}
-            {passeio.preco > 0 && !temPontosSuficientes && Number(passeio.pontos_desconto) > 0 && (
+            {/* {passeio.preco > 0 && !temPontosSuficientes && Number(passeio.pontos_desconto) > 0 && (
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-2">
                 <div className="text-center">
                   <div className="text-sm font-medium text-yellow-700">
@@ -200,7 +200,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Botão de detalhes */}
