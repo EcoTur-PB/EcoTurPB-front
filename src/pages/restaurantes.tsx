@@ -21,7 +21,6 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.8,
      // pontos_desconto: 20,
     porcentagem_desconto: 15,
-    textoRegiao: "A Barra de Mamanguape é um destino de ecoturismo isolado, onde o rio se encontra com o mar. A vila preserva um estilo de vida simples e integrado à natureza, sendo base para o Projeto Peixe-Boi.",
     boasPraticas: [
       "Uso de ingredientes da agricultura familiar local",
       "Redução drástica de resíduos plásticos",
@@ -45,7 +44,6 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.9,
      // pontos_desconto: 30,
     porcentagem_desconto: 20,
-    textoRegiao: "Comer bem em João Pessoa também significa escolher opções saudáveis. A Oca Natural se destaca pela qualidade dos ingredientes vindos diretamente de produtores orgânicos da região.",
     boasPraticas: [
       "Ingredientes 100% orgânicos e sazonais",
       "Zero uso de conservantes artificiais",
@@ -68,7 +66,6 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.8,
      // pontos_desconto: 20,
     porcentagem_desconto: 15,
-    textoRegiao: "Localizada em Manaíra, a Casa de Nara prova que a culinária à base de plantas pode ser sofisticada e extremamente saborosa, com uma vista privilegiada do mar.",
     boasPraticas: [
       "Culinária 100% baseada em plantas (vegana)",
       "Uso preferencial de ingredientes orgânicos",
@@ -80,7 +77,7 @@ const restaurantesData: Restaurante[] = [
   {
     id: 6,
     nome: "Mulheres Negras do Campo",
-    descricao: "Alimentos naturais feitos com raízes 🍠🌱",
+    descricao: "Somos um grupo de mulheres que participou da luta pela terra aqui no Gurugi. Oferecemos uma experiência imersiva com café da manhã e nosso contexto histórico do legado quilombola e indígena da região. Os alimentos são frutos da nossa terra, pelo trabalho do nosso povo feito no campo",
     cidade: "Conde",
     estado: "PB",
     preco: 0,
@@ -91,7 +88,6 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.8,
      // pontos_desconto: 20,
     porcentagem_desconto: 15,
-    textoRegiao: "Somos um grupo de mulheres que participou da luta pela terra aqui no Gurugi. Oferecemos uma experiência imersiva com café da manhã e nosso contexto histórico do legado quilombola e indígena da região. Os alimentos são frutos da nossa terra, pelo trabalho do nosso povo feito no campo",
     boasPraticas: [
       "Agricultura agroecológica",
       "Alimentos da própria terra",
@@ -114,7 +110,6 @@ const restaurantesData: Restaurante[] = [
     avaliacao: 4.8,
      // pontos_desconto: 20,
     porcentagem_desconto: 15,
-    textoRegiao: "Somos um grupo de mulheres que participou da luta pela terra aqui no Gurugi. Oferecemos uma experiência imersiva com café da manhã e nosso contexto histórico do legado quilombola e indígena da região. Os alimentos são frutos da nossa terra, pelo trabalho do nosso povo feito no campo",
     boasPraticas: [
       "Agricultura familiar",
       "Cultura quilombola",
