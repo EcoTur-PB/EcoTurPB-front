@@ -40,7 +40,7 @@ export const translations = {
     home: {
       seoTitle: "Turismo Sustentável na Paraíba",
       heroTitle: "Aproveite a Paraíba do jeito certo com cultura e consciência",
-      heroSubtitle: "Turismo sustentável na Paraíba: atividades locais com cultura, responsabilidade e preservação ambiental.",
+      heroSubtitle: "Planeje sua viagem e viva uma experiência inesquecível e consciente. Descubra o melhor da Paraíba através de hospedagens, gastronomia e vivências que respeitam a natureza e valorizam a cultura local.",
       discoverNow: "Descubra agora",
       sustainableServices: "Acesse serviços sustentáveis",
       sustainableServicesDesc: "Oferecemos descontos em restaurantes, hospedagens e serviços de turismo sustentáveis, com desconto baseado em pontos acumulados",
@@ -174,7 +174,7 @@ export const translations = {
     home: {
       seoTitle: "Sustainable Tourism in Paraíba | EcoTurPB",
       heroTitle: "Enjoy Paraíba the right way with culture and awareness",
-      heroSubtitle: "Sustainable tourism in Paraíba: local activities with culture, responsibility, and environmental preservation.",
+      heroSubtitle: "Plan your trip and enjoy an unforgettable and conscious experience. Discover the best of Paraíba through accommodations, local cuisine, and activities that respect nature and celebrate local culture.",
       discoverNow: "Discover now",
       sustainableServices: "Access sustainable services",
       sustainableServicesDesc: "We offer discounts at sustainable restaurants, accommodations, and tourism services, with discounts based on accumulated points",
