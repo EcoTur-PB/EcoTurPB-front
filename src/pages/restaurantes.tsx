@@ -10,11 +10,11 @@ const restaurantesData: Restaurante[] = [
   {
     id: 1,
     nome: "Margarida Pizzas Artesanais",
-    descricao: "Pizzas artesanais com ingredientes locais e práticas sustentáveis na pacata vila de pescadores.",
+    descricao: "Pizzas artesanais com ingredientes locais e práticas sustentáveis em barra de mamanguape.",
     cidade: "Barra de Mamanguape",
     estado: "PB",
     preco: 0,
-    imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noqFz3EJ44W3sR13WYAvUXWmoQAnXYlXw60MmahECvDbvdc0PqGT7tg-yKOfnZeU7gNkP1eAreK52Ra5Lmj3DUUaaU8ghfrqhogj2rhMKJROzuSDIi0FjXq_Idh0K4qWRhWwNsqjQ=w2003-h2700-k-no",
+    imagem: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ-rmJUw-9IXqMX0lkxVqGHEtR99adpiAUJownurdVK2mzre0dqzN1kQfbAOeUwzcFZbUM52NxLNdMlUNw7CYzU_lkjXC47Vr6KeUFuAbYdSkwNDNClRMOwum48CN7FDLrzF4hMg=s1360-w1360-h1020-rw",
     sustentavel: true,
     especialidades: ["Pizzas", "Regional", "Artesanais"],
     horario_funcionamento: "18:30 - 22:00",
@@ -107,7 +107,7 @@ const restaurantesData: Restaurante[] = [
     cidade: "João Pessoa",
     estado: "PB",
     preco: 0,
-    imagem: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=1000",
+    imagem: "https://lh3.googleusercontent.com/p/AF1QipPRRqqS1rHUfvGvHTvN8WbiSBJaxPnE-UGHjdZ_=s1360-w1360-h1020-rw",
     sustentavel: true,
     especialidades: ["Vegetariana", "Natural"],
     horario_funcionamento: "12:00 - 21:00",
@@ -122,6 +122,29 @@ const restaurantesData: Restaurante[] = [
       "Gestão eficiente de água"
     ],
     siteUrl: "https://www.instagram.com/casadenarajp/"
+  },
+  {
+    id: 6,
+    nome: "Mulheres Negras do Campo",
+    descricao: "Alimentos naturais feitos com raízes 🍠🌱",
+    cidade: "Conde",
+    estado: "PB",
+    preco: 0,
+    imagem: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHfCLQ8pZrEsrN2uFuS5KwnOXLaK8Ahm5Se8-bem-0UHk1fv7zkpLWy-aa2RF6jW04Q_ARYGkt_QzprRuTTF4cTD47wrCc2oKuoNZa6NOkCWeIaBE4q2pO7O4MLaDdhdzSuhGAw8Q=s1360-w1360-h1020-rw",
+    sustentavel: true,
+    especialidades: ["Artesanal", "Natural", "Café da Manhã"],
+    horario_funcionamento: "06:00 - 10:00",
+    avaliacao: 4.8,
+     // pontos_desconto: 20,
+    porcentagem_desconto: 15,
+    textoRegiao: "Somos um grupo de mulheres que participou da luta pela terra aqui no Gurugi. Oferecemos uma experiência imersiva com café da manhã e nosso contexto histórico do legado quilombola e indígena da região. Os alimentos são frutos da nossa terra, pelo trabalho do nosso povo feito no campo",
+    boasPraticas: [
+      "Agricultura agroecológica",
+      "Alimentos da própria terra",
+      "Economia comunitária",
+      "Consumo consciente"
+    ],
+    siteUrl: "https://www.instagram.com/negrasdocampo"
   }
 ];
 
