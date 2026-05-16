@@ -225,7 +225,7 @@ export default function RestaurantesPage() {
         {/* Filtros e busca */}
         <div className="max-w-7xl mx-auto px-4 mb-8">
           <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {/* Busca por nome */}
               <div className="relative">
                 <SearchRounded className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
