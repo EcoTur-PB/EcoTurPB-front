@@ -65,7 +65,7 @@ export const translations = {
       medium: "Médio",
     },
     hoteis: {
-      seoTitle: "Hospedagens Sustentáveis na Paraíba",
+      seoTitle: "Turismo Sustentável na Paraíba",
       title: "Hospedagens Sustentáveis",
       subtitle: "Descubra acomodações que se preocupam com o meio ambiente e oferecem experiências autênticas na Paraíba.",
       pointsAvailable: "{points} pontos disponíveis",
