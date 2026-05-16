@@ -99,6 +99,29 @@ const restaurantesData: Restaurante[] = [
       "Consumo consciente"
     ],
     siteUrl: "https://www.instagram.com/negrasdocampo"
+  },
+  {
+    id: 7,
+    nome: "Rita de Chicó",
+    descricao: "O restaurante Rita de Chicó nasceu em 2018, no Dia da Consciência Negra, valorizando a culinária tradicional e os saberes ancestrais da comunidade quilombola de Caiana dos Crioulos, na Paraíba. Inspirado na trajetória de Rita de Chicó, agricultora e referência cultural da região, o espaço une memória, afeto, agricultura familiar e turismo de experiência, preservando a herança quilombola por meio da alimentação, da cultura e da resistência comunitária.",
+    cidade: "Alagoa Grande",
+    estado: "PB",
+    preco: 0,
+    imagem: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuzCoyJzCx10eisUmKybMVZHbOJEQCqzvo2uWc9Gp1X7t0_12q-TCcBoEwBmvitQFKXlEfs74Rxd_zaP2IQ18kXvH1JX8J0HSnlWEzT-pbHwE8VIEBSccRL8NyMEZx4BJsuHI9ZQ=s1360-w1360-h1020-rw",
+    sustentavel: true,
+    especialidades: ["Artesanal", "Natural", "Café da Manhã"],
+    horario_funcionamento: "06:00 - 10:00",
+    avaliacao: 4.8,
+     // pontos_desconto: 20,
+    porcentagem_desconto: 15,
+    textoRegiao: "Somos um grupo de mulheres que participou da luta pela terra aqui no Gurugi. Oferecemos uma experiência imersiva com café da manhã e nosso contexto histórico do legado quilombola e indígena da região. Os alimentos são frutos da nossa terra, pelo trabalho do nosso povo feito no campo",
+    boasPraticas: [
+      "Agricultura familiar",
+      "Cultura quilombola",
+      "Saberes ancestrais",
+      "Produção local"
+    ],
+    siteUrl: "https://www.instagram.com/ritadechico"
   }
 ];
 
