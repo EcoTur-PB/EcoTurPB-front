@@ -38,7 +38,7 @@ export const translations = {
       loginSuccess: "Obrigado! Você receberá o código para login via Whatsapp",
     },
     home: {
-      seoTitle: "Turismo Sustentável na Paraíba | EcoTurPB",
+      seoTitle: "Turismo Sustentável na Paraíba",
       heroTitle: "Aproveite a Paraíba do jeito certo com cultura e consciência",
       heroSubtitle: "Turismo sustentável na Paraíba: atividades locais com cultura, responsabilidade e preservação ambiental.",
       discoverNow: "Descubra agora",
