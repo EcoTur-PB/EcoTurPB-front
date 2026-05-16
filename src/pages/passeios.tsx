@@ -291,7 +291,7 @@ const passeiosData: Passeio[] = [
     imagem: "https://instagram.fjpa1-1.fna.fbcdn.net/v/t51.82787-15/516281118_18043202744645698_4299051337083446854_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=MzY3MDA1NTY3NjMxMjM0OTg1NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=uySZOW_bBEwQ7kNvwGqZeMO&_nc_oc=Adp4qy1bMgyo-sL-p9BhdnzUQpDrOu9_hEzPou8O3NrIMt8I9np5Q5WISqL7ZppFupYDx-_gntvwmUPPApW8P3mZ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fjpa1-1.fna&_nc_gid=0RFEvZNTV0htUhPRaxiKRA&_nc_ss=7a22e&oh=00_Af7Uzjsia4FC2fX3ZYrUKsIcFNb-otKo7hPfn_0GmweheA&oe=6A0E5031",
     sustentavel: true,
     atividades: ["Protagonismo e fortalecimento das mulheres", "Saberes ancestrais", "Espiritualidade Potiguara", "Defesa do território indígena", "Turismo comunitário responsável, ético e sustentável."],
-    duracao: "1 hora",
+    duracao: "4 horas",
     grupo_max: 50,
      // pontos_desconto: 5,
     porcentagem_desconto: 0,
