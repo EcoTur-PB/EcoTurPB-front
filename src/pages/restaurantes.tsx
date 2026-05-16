@@ -29,7 +29,7 @@ const restaurantesData: Restaurante[] = [
       "Compostagem de resíduos orgânicos",
       "Iluminação de baixo consumo"
     ],
-    siteUrl: "https://www.instagram.com/margaridapizzas/"
+    siteUrl: "https://www.instagram.com/margarida_pizzas/"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const restaurantesData: Restaurante[] = [
     cidade: "João Pessoa",
     estado: "PB",
     preco: 0,
-    imagem: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr4E2HcA1jIHPx_ZANP7JhczxjiN6ZREV6823gVZdi_V2vW6R6_NQyLItJ_p2AqAlK5zDHbTCkWSKixe2K9yc2gx5pt258kVcTmPES7DXyQQYUk2T3TY4vt4Ukt-J8R3kZwMwg=s1360-w1360-h1020-rw",
+    imagem: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGIeZaN_FilY1PgTxS-NeWrIIpsd1Ngic1nFfpPsLl_WIkL6Me6ton3PxcsEoOduta_KLRWsISlXW839zfwzxX6rxuSuzY1oR0QgNaoyXT--ipU7qyTBpODKmhSRnjr1aVEZS4=s1360-w1360-h1020-rw",
     sustentavel: true,
     especialidades: ['Natural', 'Saudável', 'Orgânica'],
     horario_funcionamento: "11:30 - 15:00",
@@ -52,53 +52,7 @@ const restaurantesData: Restaurante[] = [
       "Embalagens biodegradáveis para delivery",
       "Programa de reciclagem de óleo de cozinha"
     ],
-    siteUrl: "https://www.instagram.com/ocanaturaljp/"
-  },
-  {
-    id: 3,
-    nome: "Restaurante Buckminster",
-    descricao: "Inspirado na arquitetura biofílica, o restaurante foi projetado em torno de uma árvore cajueira preservada, integrando-se perfeitamente ao ecossistema local.",
-    cidade: "João Pessoa",
-    estado: "PB",
-    preco: 0,
-    imagem: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1000",
-    sustentavel: true,
-    especialidades: ["Regional", "Contemporânea"],
-    horario_funcionamento: "12:00 - 23:00",
-    avaliacao: 4.7,
-     // pontos_desconto: 25,
-    porcentagem_desconto: 15,
-    textoRegiao: "Localizado no Jardim Oceania, o Buckminster é um exemplo de como a arquitetura pode respeitar a natureza, mantendo a vegetação original como parte do ambiente.",
-    boasPraticas: [
-      "Arquitetura biofílica integrada",
-      "Preservação de árvores nativas no local",
-      "Iluminação e ventilação natural otimizadas",
-      "Uso de materiais de construção sustentáveis"
-    ],
-    siteUrl: "https://www.instagram.com/buckminsterjp/"
-  },
-  {
-    id: 4,
-    nome: "Quintal Restô",
-    descricao: "Alta gastronomia autoral que valoriza o pequeno produtor local e ingredientes sazonais da Paraíba, reduzindo a pegada de carbono do transporte.",
-    cidade: "João Pessoa",
-    estado: "PB",
-    preco: 0,
-    imagem: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=1000",
-    sustentavel: true,
-    especialidades: ["Autoral", "Contemporânea", "Sazonal"],
-    horario_funcionamento: "19:00 - 23:00",
-    avaliacao: 4.9,
-     // pontos_desconto: 40,
-    porcentagem_desconto: 20,
-    textoRegiao: "No bairro do Bessa, o Quintal Restô oferece uma experiência intimista onde cada prato conta uma história sobre os produtores e a terra paraibana.",
-    boasPraticas: [
-      "Fomento direto a pequenos produtores locais",
-      "Cardápio baseado exclusivamente em ingredientes da estação",
-      "Redução drástica de desperdício na cozinha",
-      "Compostagem própria de resíduos orgânicos"
-    ],
-    siteUrl: "https://quintalresto.com.br"
+    siteUrl: "https://www.instagram.com/ocanaturall/?hl=pt-br"
   },
   {
     id: 5,
