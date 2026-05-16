@@ -7,7 +7,7 @@ interface DetalhesDialogProps {
   imagem: string;
   cidade: string;
   estado: string;
-  textoRegiao: string;
+  descricao: string;
   boasPraticas: string[];
   siteUrl: string;
   nomeEstabelecimento: string;
@@ -23,7 +23,7 @@ export function DetalhesDialog({
   imagem, 
   cidade, 
   estado, 
-  textoRegiao, 
+  descricao,
   boasPraticas, 
   siteUrl, 
   nomeEstabelecimento,
@@ -82,8 +82,8 @@ export function DetalhesDialog({
                 </div>
               )}
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{t.common.aboutRegion}</h3>
-                <p className="text-gray-600 leading-relaxed">{textoRegiao}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">{t.common.aboutActivity}</h3>
+                <p className="text-gray-600 leading-relaxed max-h-[20ch] overflow-y-scroll">{descricao}</p>
               </div>
 
               {/* Boas práticas */}

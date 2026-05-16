@@ -284,7 +284,7 @@ const passeiosData: Passeio[] = [
   {
     id: 22,
     nome: "Casa da Lua – Kunhãbebé",
-    descricao: "A Casa da Lua – Kunhãbebé é um coletivo de mulheres indígenas e indigenistas que atuam no fortalecimento do protagonismo feminino, da cultura e da proteção do território indígena Potiguara, com sua sede localizada na Aldeia São Miguel, em Baía da Traição – PB. Nossas ações são inspiradas pelos saberes ancestrais e pela presença dos Encantados Potiguara, que orientam o cuidado com a vida, a cultura e a natureza. Atuamos também na preservação da Mata Atlântica, reconhecendo a importância da floresta, das águas e da biodiversidade para a continuidade dos saberes tradicionais. Desenvolvemos projetos de fortalecimento das mulheres, geração de renda, enfrentamento à violência de gênero e iniciativas de turismo de base comunitária responsável, étnico e sustentável, valorizando a cultura Potiguara e o cuidado com o território.",
+    descricao: "A Casa da Lua – Kunhãbebé é um coletivo de mulheres indígenas e indigenistas que atua no fortalecimento do protagonismo feminino, na valorização da cultura ancestral e na proteção dos territórios e da natureza, inspirando-se nos saberes tradicionais e na presença dos Encantados Potiguara. Suas ações envolvem a preservação da Mata Atlântica, o cuidado com a biodiversidade, o fortalecimento das mulheres, a geração de renda, o enfrentamento à violência de gênero e o desenvolvimento de iniciativas de turismo de base comunitária responsável, étnico e sustentável, sempre promovendo o cuidado com a vida, a cultura e os saberes tradicionais.",
     cidade: "Baía da Traição",
     estado: "PB",
     preco: 0,

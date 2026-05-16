@@ -47,7 +47,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
   // Dados padrão para quando não estão definidos
   const textoRegiao = passeio.textoRegiao || `${passeio.cidade} oferece experiências únicas de turismo sustentável na Paraíba. A região é conhecida por suas belezas naturais e compromisso com a preservação ambiental.`;
   
-  const boasPraticas = passeio.boasPraticas || [
+  const boasPraticas = passeio.atividades || [
     'Grupos reduzidos para menor impacto ambiental',
     'Guias especializados em educação ambiental',
     'Materiais reutilizáveis e sustentáveis',
@@ -216,7 +216,7 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
         imagem={passeio.imagem}
         cidade={passeio.cidade}
         estado={passeio.estado}
-        textoRegiao={textoRegiao}
+        descricao={passeio.descricao}
         boasPraticas={boasPraticas}
         siteUrl={siteUrl}
         nomeEstabelecimento="passeio"
