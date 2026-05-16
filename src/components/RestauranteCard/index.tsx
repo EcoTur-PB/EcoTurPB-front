@@ -51,7 +51,6 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
   const precoComDesconto = restaurante.preco - valorDesconto;
   
   // Dados padrão para quando não estão definidos
-  const textoRegiao = restaurante.textoRegiao || `${restaurante.cidade} é uma cidade encantadora da Paraíba, conhecida por sua rica cultura gastronômica e tradições locais. A região oferece uma variedade de ingredientes frescos e naturais, proporcionando uma experiência culinária única e autêntica.`;
   
   const boasPraticas = restaurante.boasPraticas || [
     'Utilização de ingredientes locais e orgânicos',
