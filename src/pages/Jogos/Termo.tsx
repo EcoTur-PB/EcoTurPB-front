@@ -4,21 +4,21 @@ import { EmojiEventsRounded, ReplayRounded, HelpOutlineRounded } from '@mui/icon
 import { toast } from 'react-toastify';
 
 const PALAVRAS_TERMO = [
-  'LAGOA', 'FAROL', 'PRAIA', 'AREIA', 'SEIXA', 
-  'BUSTO', 'MANGA', 'VERDE', 'PICOS', 'HOTEL'
+  'BRAVA', 'CHICO', 'GLOBO', 'RONCA', 'MATUT',
+  'KUNHA', 'MACUX', 'DINOS', 'LAJED', 'CAMAR'
 ];
 
 const DICAS: { [key: string]: string } = {
-  'LAGOA': 'Ponto central de João Pessoa: Parque Solon de Lucena.',
-  'FAROL': 'Fica no Cabo Branco, o ponto mais oriental das Américas.',
-  'PRAIA': 'João Pessoa é famosa por suas belas...',
-  'AREIA': 'A ilha de ____ Vermelha é um ponto turístico famoso.',
-  'SEIXA': 'Ponta do _____, o extremo oriente das Américas.',
-  'BUSTO': 'O _____ de Tamandaré fica entre as praias de Tambaú e Cabo Branco.',
-  'MANGA': 'Ecossistema importante de João Pessoa: _____zal.',
-  'VERDE': 'João Pessoa é conhecida como a segunda capital mais _____ do mundo.',
-  'PICOS': 'As piscinas naturais de _____zinho.',
-  'HOTEL': 'O _____ Tambaú é um ícone da arquitetura na orla.'
+  'BRAVA': 'Pousada Rural Vaca _____, no Brejo Paraibano.',
+  'CHICO': 'Rita de _____, sabor e tradição quilombola.',
+  'GLOBO': 'Hotel _____ e seu pôr do sol no Rio Sanhauá.',
+  'RONCA': 'Cachoeira do _____dor, um tesouro em Bananeiras.',
+  'MATUT': 'Pousada _____ Sonhador, no cenário de Cabaceiras.',
+  'KUNHA': 'Casa da Lua – _____bebé, coletivo de mulheres indígenas.',
+  'MACUX': 'Território _____í, camping e cultura indígena no Conde.',
+  'DINOS': 'Vale dos _____sauros, pegadas milenares em Sousa.',
+  'LAJED': '_____o de Pai Mateus, formações rochosas únicas.',
+  'CAMAR': 'Barra de _____tuba, onde o rio encontra o mar.'
 };
 
 const MAX_TENTATIVAS = 6;

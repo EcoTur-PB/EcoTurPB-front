@@ -14,40 +14,63 @@ interface Level {
 const LEVELS: Level[] = [
   {
     name: 'Fácil',
-    size: 8,
-    words: ['PRAIA', 'SOL', 'MAR', 'AREIA'],
+    size: 10,
+    words: ['MACUXI', 'LAJEDO', 'BRAVA', 'INGA'],
     points: 50,
     directions: [[1, 0], [0, 1]]
   },
   {
     name: 'Médio',
-    size: 10,
-    words: ['TAMBAU', 'LAGOA', 'BESSA', 'SEIXAS'],
+    size: 11,
+    words: ['RONCADOR', 'KUNHABEBE', 'MARGARIDA', 'MATUTO'],
     points: 100,
     directions: [[1, 0], [0, 1], [1, 1]]
   },
   {
     name: 'Difícil',
-    size: 12,
-    words: ['CABOBRANCO', 'MANAIRA', 'ESTACAO', 'SOLON'],
+    size: 13,
+    words: ['DINOSSAUROS', 'CAMARATUBA', 'FLORDEMEL', 'RITADECHICO'],
     points: 150,
     directions: [[1, 0], [0, 1], [1, 1], [-1, 1], [0, -1], [-1, 0]]
   },
   {
     name: 'Mestre',
-    size: 13,
-    words: ['PICAOZINHO', 'HISTORICO', 'MANGUEZAL', 'SÃOFRANCISCO'],
+    size: 14,
+    words: ['AREIAVERMELHA', 'PICAOZINHO', 'COQUEIRINHO', 'TAMBABA'],
     points: 200,
     directions: [[1, 0], [0, 1], [1, 1], [-1, 1], [1, -1], [-1, -1], [0, -1], [-1, 0]]
   },
   {
     name: 'Eco-Lenda',
-    size: 14,
-    words: ['AREIAVERMELHA', 'SUSTENTAVEL', 'PRESERVAÇÃO', 'PARAIBESE'],
+    size: 15,
+    words: ['PAIMATEUS', 'BANANEIRAS', 'CABACEIRAS', 'JACUMA'],
     points: 250,
     directions: [[1, 0], [0, 1], [1, 1], [-1, 1], [1, -1], [-1, -1], [0, -1], [-1, 0]]
   }
 ];
+
+const EXPLICACOES_PALAVRAS: { [key: string]: string } = {
+  'MACUXI': 'Território indígena no Conde com camping sustentável e preservação de 4 ecossistemas.',
+  'LAJEDO': 'Refere-se ao Lajedo de Pai Mateus, uma das formações rochosas mais impressionantes do mundo.',
+  'BRAVA': 'Pousada Rural Vaca Brava em Areia, focada em turismo rural e acolhimento familiar.',
+  'INGA': 'Sítio Arqueológico Pedra do Ingá, monumento com inscrições rupestres milenares únicas.',
+  'RONCADOR': 'Cachoeira exuberante no Brejo Paraibano, entre Bananeiras e Pirpirituba.',
+  'KUNHABEBE': 'Coletivo de mulheres indígenas na Baía da Traição focado em protagonismo feminino.',
+  'MARGARIDA': 'Pizzaria artesanal em Barra de Mamanguape que utiliza ingredientes da agricultura familiar.',
+  'MATUTO': 'Pousada Matuto Sonhador em Cabaceiras, famosa pela gastronomia regional premiada.',
+  'DINOSSAUROS': 'Vale em Sousa que abriga um dos maiores sítios paleontológicos do mundo.',
+  'CAMARATUBA': 'Vila em Mataraca onde o rio encontra o mar, focada em sustentabilidade.',
+  'FLORDEMEL': 'Ecopousada em Bananeiras com horta orgânica e arquitetura integrada à mata.',
+  'RITADECHICO': 'Restaurante quilombola em Alagoa Grande que preserva saberes ancestrais.',
+  'AREIAVERMELHA': 'Parque Marinho em Cabedelo formado por bancos de areia e corais.',
+  'PICAOZINHO': 'Piscinas naturais de João Pessoa famosas pela biodiversidade marinha.',
+  'COQUEIRINHO': 'Praia no Conde famosa pelas falésias coloridas e águas cristalinas.',
+  'TAMBABA': 'Primeira praia de naturismo do Nordeste, símbolo de liberdade e preservação.',
+  'PAIMATEUS': 'O Lajedo de Pai Mateus é um patrimônio histórico e natural único no Cariri.',
+  'BANANEIRAS': 'Cidade serrana famosa pelo seu clima ameno e arquitetura ferroviária.',
+  'CABACEIRAS': 'A Roliúde Nordestina, cidade cinematográfica no coração do Cariri.',
+  'JACUMA': 'Litoral sul da Paraíba, ponto de partida para praias intocadas.'
+};
 
 export default function CacaPalavras() {
   const [levelIndex, setLevelIndex] = useState(0);
@@ -264,6 +287,31 @@ export default function CacaPalavras() {
             Complete o caça-palavras para ganhar até <strong>250 pontos</strong>!
           </p>
         </div>
+
+        {/* Explicações das Palavras (Curiosidades) */}
+        {foundWords.length === wordsToFind.length && (
+          <div className="mt-8 max-w-4xl w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div className="bg-white p-6 rounded-2xl shadow-xl border-2 border-green-200">
+              <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                <HelpOutlineRounded className="mr-2" /> Você sabia?
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {wordsToFind.map(word => (
+                  <div key={word} className="bg-green-50 p-4 rounded-xl border border-green-100">
+                    <span className="font-bold text-green-700 block mb-1">{word}</span>
+                    <p className="text-sm text-gray-700">{EXPLICACOES_PALAVRAS[word] || 'Localização sustentável da Paraíba.'}</p>
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={() => iniciarJogo(Math.floor(Math.random() * LEVELS.length))}
+                className="mt-8 w-full bg-green-600 text-white px-6 py-3 rounded-xl font-bold text-lg hover:bg-green-700 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Jogar Novo Nível
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
