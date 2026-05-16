@@ -192,6 +192,7 @@ export default function HoteisPage() {
   const [filtro, setFiltro] = useState('');
   const [ordenacao, setOrdenacao] = useState('nome');
   const [cidadeFiltro, setCidadeFiltro] = useState('');
+  const [apenasParceiros, setApenasParceiros] = useState(false);
   const { t } = useLanguage();
   
   // Pontos do usuário (pode ser alterado para testar)
@@ -201,7 +202,8 @@ export default function HoteisPage() {
   const hoteisFiltrados = hoteis.filter(hotel => {
     const matchesNome = hotel.nome.toLowerCase().includes(filtro.toLowerCase());
     const matchesCidade = cidadeFiltro === '' || hotel.cidade === cidadeFiltro;
-    return matchesNome && matchesCidade;
+    const matchesParceiro = !apenasParceiros || hotel.parceiro_oficial;
+    return matchesNome && matchesCidade && matchesParceiro;
   });
 
   // Função para ordenar hotéis
@@ -327,6 +329,19 @@ export default function HoteisPage() {
                   <option value="economia">{t.hoteis.sortEconomy}</option>
                   <option value="pontos">{t.hoteis.sortPoints}</option>
                 </select>
+              </div>
+
+              <div className="flex items-center gap-2 px-2">
+                <input
+                  type="checkbox"
+                  id="apenasParceiros"
+                  checked={apenasParceiros}
+                  onChange={(e) => setApenasParceiros(e.target.checked)}
+                  className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500 cursor-pointer"
+                />
+                <label htmlFor="apenasParceiros" className="text-sm text-gray-700 cursor-pointer select-none">
+                  {t.common.onlyOfficialPartners}
+                </label>
               </div>
 
               {/* Contador de resultados */}

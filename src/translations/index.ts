@@ -21,6 +21,7 @@ export const translations = {
       aboutActivity: "Sobre nós",
       sustainablePractices: "Práticas Sustentáveis",
       visitSite: "Visitar site do {name}",
+      onlyOfficialPartners: "Apenas parceiros oficiais",
     },
     header: {
       activities: "Atividades",
@@ -94,7 +95,7 @@ export const translations = {
       sortEconomy: "Maior economia",
       sortPoints: "Mais pontos",
       sortDuration: "Menor duração",
-      foundCount: "{count} passeio(s) encontrado(s)",
+      foundCount: "{count} atividade(s) encontrada(s)",
       notFound: "Nenhum passeio encontrado",
       tryAdjustFilters: "Tente ajustar seus filtros de busca.",
     },
@@ -127,7 +128,7 @@ export const translations = {
       step3Title: "Troque por Descontos",
       step3Desc: "Use seus pontos para conseguir descontos em estabelecimentos parceiros",
       availableGames: "Jogos Disponíveis",
-      pointsSystem: "Sistema de Pontos",
+      pointsSystem: "Points System",
       pointsSystemDesc: "Seus pontos podem ser trocados por descontos reais nos nossos parceiros!",
       discountOff: "{percent}% de desconto",
     }
@@ -154,6 +155,7 @@ export const translations = {
       aboutActivity: "More about us",
       sustainablePractices: "Sustainable Practices",
       visitSite: "Visit {name}'s website",
+      onlyOfficialPartners: "Only official partners",
     },
     header: {
       activities: "Activities",
@@ -161,7 +163,7 @@ export const translations = {
       restaurants: "Restaurants",
       games: "Games",
       login: "Login",
-      loginViaWhatsApp: "Login via WhatsApp",
+      loginViaWhatsapp: "Login via WhatsApp",
       whatsappDescription: "Enter your WhatsApp number to receive the login code.",
       whatsappNumber: "WhatsApp Number",
       cancel: "Cancel",

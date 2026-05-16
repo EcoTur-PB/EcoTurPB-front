@@ -307,6 +307,7 @@ export default function PasseiosPage() {
   const [filtro, setFiltro] = useState('');
   const [ordenacao, setOrdenacao] = useState('nome');
   const [cidadeFiltro, setCidadeFiltro] = useState('');
+  const [apenasParceiros, setApenasParceiros] = useState(false);
   const { t } = useLanguage();
   
   const [pontosUsuario, setPontosUsuario] = useState(50);
@@ -314,7 +315,8 @@ export default function PasseiosPage() {
   const passeiosFiltrados = passeios.filter(passeio => {
     const matchesNome = passeio.nome.toLowerCase().includes(filtro.toLowerCase());
     const matchesCidade = cidadeFiltro === '' || passeio.cidade === cidadeFiltro;
-    return matchesNome && matchesCidade;
+    const matchesParceiro = !apenasParceiros || passeio.parceiro_oficial;
+    return matchesNome && matchesCidade && matchesParceiro;
   });
 
   const restaurantesOrdenados = [...passeiosFiltrados].sort((a, b) => {
@@ -429,6 +431,19 @@ export default function PasseiosPage() {
                   <option value="pontos">{t.passeios.sortPoints}</option>
                   <option value="duracao">{t.passeios.sortDuration}</option>
                 </select>
+              </div>
+
+              <div className="flex items-center gap-2 px-2">
+                <input
+                  type="checkbox"
+                  id="apenasParceiros"
+                  checked={apenasParceiros}
+                  onChange={(e) => setApenasParceiros(e.target.checked)}
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 cursor-pointer"
+                />
+                <label htmlFor="apenasParceiros" className="text-sm text-gray-700 cursor-pointer select-none">
+                  {t.common.onlyOfficialPartners}
+                </label>
               </div>
 
               <div className="flex items-center justify-center sm:justify-start">

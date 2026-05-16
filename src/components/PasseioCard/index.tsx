@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded, MoneyOffRounded, VerifiedRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded, VerifiedRounded } from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Passeio {
