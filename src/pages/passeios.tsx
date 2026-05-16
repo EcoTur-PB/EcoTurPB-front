@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { SEO } from '../components/SEO';
 import { PasseioCard, Passeio } from '../components/PasseioCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
-import { Moeda } from '../components/Moeda';
+// import { Moeda } from '../components/Moeda';
 
 // Dados reais dos passeios com imagens oficiais e específicas da Paraíba (Fontes: PBTur, Governo PB, Secom-JP)
 const passeiosData: Passeio[] = [
@@ -374,7 +374,7 @@ export default function PasseiosPage() {
             {t.passeios.subtitle}
           </p>
           
-          <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 max-w-md mx-auto">
+          {/* <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Moeda/>
               <div>
@@ -386,7 +386,7 @@ export default function PasseiosPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 mb-8">

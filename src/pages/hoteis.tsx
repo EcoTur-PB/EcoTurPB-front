@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { HotelCard, Hotel } from '../components/HotelCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
-import { Moeda } from '../components/Moeda';
+// import { Moeda } from '../components/Moeda';
 import { SEO } from '../components/SEO';
 
 // Dados mockados dos hotéis
@@ -268,7 +268,7 @@ export default function HoteisPage() {
           </p>
           
           {/* Pontos do usuário */}
-          <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
+          {/* <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Moeda/>
               <div>
@@ -281,7 +281,7 @@ export default function HoteisPage() {
               </div>
             </div>
             
-          </div>
+          </div> */}
         </div>
 
         {/* Filtros e busca */}

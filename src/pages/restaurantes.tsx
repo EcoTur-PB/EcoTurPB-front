@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { SEO } from '../components/SEO';
 import { RestauranteCard, Restaurante } from '../components/RestauranteCard';
 import { SearchRounded, FilterListRounded, SortRounded } from '@mui/icons-material';
-import { Moeda } from '../components/Moeda';
+// import { Moeda } from '../components/Moeda';
 
 // Dados mockados dos restaurantes
 const restaurantesData: Restaurante[] = [
@@ -207,7 +207,7 @@ export default function RestaurantesPage() {
           </p>
           
           {/* Pontos do usuário */}
-          <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
+          {/* <div className="bg-green-100 border border-green-300 rounded-lg p-4 max-w-md mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Moeda/>
               <div>
@@ -219,7 +219,7 @@ export default function RestaurantesPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Filtros e busca */}
