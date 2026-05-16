@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded, MoneyOffRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, AccessTimeRounded, GroupRounded, SailingRounded, MoneyOffRounded, VerifiedRounded } from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Passeio {
@@ -11,6 +11,7 @@ export interface Passeio {
   preco: number;
   imagem: string;
   sustentavel: boolean;
+  parceiro_oficial?: boolean;
   atividades: string[];
   duracao: string;
   grupo_max: number;
@@ -66,18 +67,24 @@ export function PasseioCard({ passeio, pontosUsuario = 5000 }: PasseioCardProps)
             className="w-full h-48 sm:h-56 object-cover"
           />
           <div className='w-full flex gap-2 flex-col justify-between absolute top-0 left-0 p-3'>
-            {passeio.sustentavel && (
+            {passeio.parceiro_oficial && (
+              <div className="w-fit bg-green-600 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium shadow-sm">
+                <VerifiedRounded className="w-3 h-3" />
+                {t.common.officialPartner}
+              </div>
+            )}
+            {/* {passeio.sustentavel && (
               <div className="w-fit bg-blue-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
                 <NatureRounded className="w-3 h-3" />
                 {t.common.sustainable}
               </div>
-            )}
-            {passeio.preco == 0 && (
+            )} */}
+            {/* {passeio.preco == 0 && (
               <div className="w-fit bg-green-700 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
                 <MoneyOffRounded className="w-3 h-3" />
                 {t.common.free}
               </div>
-            )}
+            )} */}
           </div>
         </div>
 

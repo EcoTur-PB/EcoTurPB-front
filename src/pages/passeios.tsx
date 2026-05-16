@@ -295,7 +295,8 @@ const passeiosData: Passeio[] = [
     grupo_max: 50,
     pontos_desconto: 5,
     porcentagem_desconto: 0,
-    siteUrl: "https://www.instagram.com/casadaluapb"
+    siteUrl: "https://www.instagram.com/casadaluapb",
+    parceiro_oficial: true
   }
 ];
 
@@ -317,6 +318,10 @@ export default function PasseiosPage() {
   });
 
   const restaurantesOrdenados = [...passeiosFiltrados].sort((a, b) => {
+    // Priorizar parceiros oficiais
+    if (a.parceiro_oficial && !b.parceiro_oficial) return -1;
+    if (!a.parceiro_oficial && b.parceiro_oficial) return 1;
+
     switch (ordenacao) {
       case 'preco-menor':
         return a.preco - b.preco;

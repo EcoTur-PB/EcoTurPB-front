@@ -2,6 +2,7 @@ export const translations = {
   pt: {
     common: {
       sustainable: "Sustentável",
+      officialPartner: "Parceiro Oficial",
       free: "Gratuito",
       more: "+{count} mais",
       perNight: "por noite",
@@ -134,6 +135,7 @@ export const translations = {
   en: {
     common: {
       sustainable: "Sustainable",
+      officialPartner: "Official Partner",
       free: "Free",
       more: "+{count} more",
       perNight: "per night",
@@ -159,7 +161,7 @@ export const translations = {
       restaurants: "Restaurants",
       games: "Games",
       login: "Login",
-      loginViaWhatsapp: "Login via WhatsApp",
+      loginViaWhatsApp: "Login via WhatsApp",
       whatsappDescription: "Enter your WhatsApp number to receive the login code.",
       whatsappNumber: "WhatsApp Number",
       cancel: "Cancel",

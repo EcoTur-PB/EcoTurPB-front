@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded, LocalPizzaRounded, FrontHandRounded, Spa, CompostRounded, BlenderRounded} from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, RestaurantRounded, AccessTimeRounded, LocalPizzaRounded, FrontHandRounded, Spa, CompostRounded, BlenderRounded, VerifiedRounded} from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Restaurante {
@@ -11,6 +11,7 @@ export interface Restaurante {
   preco: number;
   imagem: string;
   sustentavel: boolean;
+  parceiro_oficial?: boolean;
   especialidades: string[];
   horario_funcionamento: string;
   avaliacao: number;
@@ -72,12 +73,20 @@ export function RestauranteCard({ restaurante, pontosUsuario = 5000 }: Restauran
           alt={restaurante.nome}
           className="w-full h-48 sm:h-56 object-cover"
         />
-        {restaurante.sustentavel && (
-          <div className="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
-            <NatureRounded className="w-3 h-3" />
-            {t.common.sustainable}
-          </div>
-        )}
+        <div className='w-full flex gap-2 flex-col justify-between absolute top-0 left-0 p-3'>
+          {restaurante.parceiro_oficial && (
+            <div className="w-fit bg-green-600 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium shadow-sm">
+              <VerifiedRounded className="w-3 h-3" />
+              {t.common.officialPartner}
+            </div>
+          )}
+          {/* {restaurante.sustentavel && (
+            <div className="w-fit bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
+              <NatureRounded className="w-3 h-3" />
+              {t.common.sustainable}
+            </div>
+          )} */}
+        </div>
       </div>
 
       {/* Conteúdo do card */}

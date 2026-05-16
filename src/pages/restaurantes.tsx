@@ -146,6 +146,10 @@ export default function RestaurantesPage() {
 
   // Função para ordenar restaurantes
   const restaurantesOrdenados = [...restaurantesFiltrados].sort((a, b) => {
+    // Priorizar parceiros oficiais
+    if (a.parceiro_oficial && !b.parceiro_oficial) return -1;
+    if (!a.parceiro_oficial && b.parceiro_oficial) return 1;
+
     switch (ordenacao) {
       case 'preco-menor':
         return a.preco - b.preco;

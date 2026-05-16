@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { LocationOnRounded, NatureRounded, WifiRounded, RestaurantRounded, LocalParkingRounded } from '@mui/icons-material';
+import { LocationOnRounded, NatureRounded, WifiRounded, RestaurantRounded, LocalParkingRounded, VerifiedRounded } from '@mui/icons-material';
 import { DetalhesDialog } from '../DetalhesDialog';
 
 export interface Hotel {
@@ -11,6 +11,7 @@ export interface Hotel {
   preco: number;
   imagem: string;
   sustentavel: boolean;
+  parceiro_oficial?: boolean;
   comodidades: string[];
   pontos_desconto: number;
   porcentagem_desconto: number;
@@ -64,12 +65,20 @@ export function HotelCard({ hotel, pontosUsuario = 5000 }: HotelCardProps) {
           alt={hotel.nome}
           className="w-full h-48 sm:h-56 object-cover"
         />
-        {hotel.sustentavel && (
-          <div className="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
-            <NatureRounded className="w-3 h-3" />
-            {t.common.sustainable}
-          </div>
-        )}
+        <div className='w-full flex gap-2 flex-col justify-between absolute top-0 left-0 p-3'>
+          {hotel.parceiro_oficial && (
+            <div className="w-fit bg-green-600 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium shadow-sm">
+              <VerifiedRounded className="w-3 h-3" />
+              {t.common.officialPartner}
+            </div>
+          )}
+          {/* {hotel.sustentavel && (
+            <div className="w-fit bg-green-500 text-white px-2 py-1 rounded-full flex items-center gap-1 text-xs font-medium">
+              <NatureRounded className="w-3 h-3" />
+              {t.common.sustainable}
+            </div>
+          )} */}
+        </div>
       </div>
 
       {/* Conteúdo do card */}
