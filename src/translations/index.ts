@@ -172,7 +172,7 @@ export const translations = {
       loginSuccess: "Thank you! You will receive the login code via WhatsApp",
     },
     home: {
-      seoTitle: "Sustainable Tourism in Paraíba | EcoTurPB",
+      seoTitle: "Turismo Sustentável na Paraíba | EcoTurPB",
       heroTitle: "Enjoy Paraíba the right way with culture and awareness",
       heroSubtitle: "Plan your trip and enjoy an unforgettable and conscious experience. Discover the best of Paraíba through accommodations, local cuisine, and activities that respect nature and celebrate local culture.",
       discoverNow: "Discover now",
@@ -199,7 +199,7 @@ export const translations = {
       medium: "Medium",
     },
     hoteis: {
-      seoTitle: "Sustainable Accommodations in Paraíba",
+      seoTitle: "Turismo Sustentável na Paraíba",
       title: "Sustainable Accommodations",
       subtitle: "Discover accommodations that care about the environment and offer authentic experiences in Paraíba.",
       pointsAvailable: "{points} points available",
@@ -216,7 +216,7 @@ export const translations = {
       tryAdjustFilters: "Try adjusting your search filters.",
     },
     passeios: {
-      seoTitle: "Sustainable Tours and Activities in Paraíba",
+      seoTitle: "Passeios e Atividades Sustentáveis na Paraíba",
       title: "Sustainable Activities",
       subtitle: "Local activities, preserving the environment and promoting Paraíba's culture. Participate in free activities, earn points and help preserve our ecosystem!",
       pointsAvailable: "{points} points available",
@@ -234,7 +234,7 @@ export const translations = {
       tryAdjustFilters: "Try adjusting your search filters.",
     },
     restaurantes: {
-      seoTitle: "Sustainable Restaurants in Paraíba",
+      seoTitle: "Restaurantes Sustentáveis na Paraíba",
       title: "Sustainable Restaurants",
       subtitle: "Enjoy delicious dishes in establishments that value local ingredients and sustainable practices in Paraíba.",
       pointsAvailable: "{points} points available",
